@@ -1,0 +1,41 @@
+<!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
+{% extends 'base-admin.html' %}
+{% block content %}
+<div>
+    <h1>Lista de Personagens</h1>
+    <a href="{{ url_for('adicionar_personagem')}}" class="btn btn-primary"> Adicionar</a>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Classe</th>
+                <th>Força</th>
+                <th>Destreza</th>
+                <th>Inteligência</th>
+                <th>Idade</th>
+                <th>História</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for id, personagem in personagens.items() %}
+            <tr>
+                <td>{{ id }}</td>
+                <td><strong>{{ personagem['nome'] }}</strong></td>
+                <td>{{ personagem['classe'] }}</td>
+                <td>{{ personagem['força'] }}</td>
+                <td>{{ personagem['destreza'] }}</td>
+                <td>{{ personagem['inteligência'] }}</td>
+                <td>{{ personagem['idade'] }}</td>
+                <td>{{ personagem['história'] }}</td>
+                <td><img src="{{ personagem['imagem'] }}" alt="thumbnail" class="img-thumbnail"></td>
+                <td><a href="{{ url_for('editar_personagem', id = id)}}">Editar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

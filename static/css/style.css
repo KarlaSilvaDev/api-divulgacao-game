@@ -1,0 +1,13 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: hsl(210, 10%, 35%)
+}
+
+
+
+.navbar {
+    background-color: rgba(3, 0, 3, 0.9);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    height: 10vh;
+}

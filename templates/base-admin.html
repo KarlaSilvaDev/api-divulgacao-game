@@ -1,0 +1,45 @@
+<!--ADMIN - Base para as páginas de administração-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Shadows</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}"/>
+    <script src="{{url_for('static', filename = 'js/bootstrap.bundle.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <!--Menu de Navegação--> 
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a href="{{ url_for('home') }}" class="d-inline-flex link-body-emphasis text-decoration-none"><img src="https://see.fontimg.com/api/renderfont4/lg97d/eyJyIjoiZnMiLCJoIjo0NiwidyI6MTAwMCwiZnMiOjQ2LCJmZ2MiOiIjQzcxMkY0IiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/TmVvbiBTaGFkb3dz/cyberway-riders.png" class="navbar-brand mx-5 logo" alt="Cyberpunk fonts"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="{{ url_for('home_admin') }}">LISTAR</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('adicionar_personagem') }}">ADICIONAR</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 text-end mx-5">
+          <a class="btn btn-outline-light me-2" href="{{url_for('home')}}">Logout</a>
+        </div>
+      </nav>
+    </header>
+
+    <!--Conteúdo Principal-->
+    <main class="container">{% block content %}{% endblock %}</main>
+
+    <!--Rodapé-->
+    <footer class="py-3 bg-dark">
+      <div class="px-4 px-lg-5">
+          <p class="m-0 text-center text-white">Copyright &copy; Korú Team 3 2023</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

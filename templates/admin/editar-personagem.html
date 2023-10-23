@@ -1,0 +1,58 @@
+<!--ADMIN: página que irá permitir o cadastro e edição do personagem-->
+{% extends 'base-admin.html' %}
+{% block content %}
+    <h1>Editar Personagem</h1>
+
+    <!--Atributos: id, nome, classe, força, destreza, inteligência, idade, história, imagem-->
+
+    <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
+            <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
+            <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+        <div class="form-group">
+            <label for="classe">Classe:</label>
+            <input type="text" class="form-control" id="classe" name="classe" value="{{ classe }}" required>
+            <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+        <div class="form-group">
+            <label for="força">Força (0 a 10):</label>
+            <input type="number" class="form-control" id="força" name="força" value="{{ força }}" required>
+            <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+        <div class="form-group">
+            <label for="destreza">Destreza (0 a 10):</label>
+            <input type="number" class="form-control" id="destreza" name="destreza" value="{{ destreza }}" required>
+            <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+        <div class="form-group">
+            <label for="inteligência">Inteligência (0 a 10):</label>
+            <input type="number" class="form-control" id="inteligência" name="inteligência" value="{{ inteligência }}" required>
+            <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+        <div class="form-group">
+            <label for="idade">Idade:</label>
+            <input type="number" class="form-control" id="idade" name="idade" value="{{ idade }}" required>
+            <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+        <div class="form-group">
+            <label for="história">História:</label>
+            <input type="text" class="form-control" id="história" name="história" value="{{ história }}">
+        </div>
+        <div class="form-group">
+            <label for="imagem">Imagem:</label>
+            <input type="text" class="form-control" id="imagem" name="imagem" value="{{imagem}}">
+            <img src="{{imagem}}" style="max-width: 200px; max-height: 200px;">
+        </div> 
+        <input type="submit" class="btn btn-primary" name="salvar" value="salvar">
+        <a href="{{url_for('home_admin')}}" class="btn btn-secondary">Cancelar</a>
+        <input type="submit" class="btn btn-danger" name="excluir" value="excluir">
+
+    </form>
+{% endblock %}
