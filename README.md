@@ -124,6 +124,16 @@ python app.py
                 <sub><b>Viktor Ariel</b></sub>
             </a>
         </td>
+         <td align="center">
+            <a href="https://github.com/lbscarvalho">
+                <img src="https://avatars.githubusercontent.com/u/126473476?v=4" width="100px;" alt="Lucas-Borges"/>
+                <br />
+                <sub><b>Lucas Borges</b></sub>
+            </a>
+        </td>
+
+
+        
     </tr>
 </table>
 
