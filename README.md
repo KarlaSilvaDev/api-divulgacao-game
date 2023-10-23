@@ -130,10 +130,7 @@ python app.py
                 <br />
                 <sub><b>Lucas Borges</b></sub>
             </a>
-        </td>
-
-
-        
+        </td> 
     </tr>
 </table>
 
