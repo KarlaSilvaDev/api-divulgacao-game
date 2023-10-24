@@ -1,10 +1,10 @@
 from flask import render_template
-from data import personagens
+from data import personagens, usuarios
 from datetime import datetime
 
 
-def gerar_id():
-    lista_de_chaves = list(personagens.keys())
+def gerar_id(dicionario: dict):
+    lista_de_chaves = list(dicionario.keys())
 
     if lista_de_chaves:
         id = lista_de_chaves[-1] + 1
@@ -19,7 +19,7 @@ def gerar_id():
 def adicionar_personagem(
     nome, classe, força, destreza, inteligência, idade, história, imagem
 ):
-    personagens[gerar_id()] = {
+    personagens[gerar_id(personagens)] = {
         "nome": nome,
         "classe": classe,
         "força": força,
@@ -31,23 +31,32 @@ def adicionar_personagem(
     }
 
 
-def listar_personagens():  # READ - LER
-    return personagens
+def adicionar_usuario(nome, login, email, senha):
+    usuarios[gerar_id(usuarios)] = {
+        "nome": nome,
+        "login": login,
+        "email": email,
+        "senha": senha,
+    }
 
 
-def detalhar_personagem(id: int):  # READ - LER
-    if id in personagens.keys():
-        return personagens[id]
+def listar(dicionario: dict):  # READ - LER
+    return dicionario
+
+
+def detalhar_por_id(id: int, dicionario: dict):  # READ - LER
+    if id in dicionario.keys():
+        return dicionario[id]
     else:
         return {}
 
 
-def atualizar_personagem(id: int, dados_personagem: dict):  # UPDATE - ATUALIZAR
-    personagens[id].update(dados_personagem)
+def atualizar(id: int, dicionario: dict, dados_editados: dict):  # UPDATE - ATUALIZAR
+    dicionario[id].update(dados_editados)
 
 
-def remover_personagem(id: int):  # DELETE - DELETAR
-    del personagens[id]
+def remover(id: int, dicionario: dict):  # DELETE - DELETAR
+    del dicionario[id]
 
 
 def tratar_iso_para_dmy(data: str):  # TRATAMENTO DE DATAS - DMY = DIA, MÊS E ANO

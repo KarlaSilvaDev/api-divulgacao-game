@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
+    
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a href="{{ url_for('home') }}" class="d-inline-flex link-body-emphasis text-decoration-none"><img src="https://see.fontimg.com/api/renderfont4/lg97d/eyJyIjoiZnMiLCJoIjo0NiwidyI6MTAwMCwiZnMiOjQ2LCJmZ2MiOiIjQzcxMkY0IiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/TmVvbiBTaGFkb3dz/cyberway-riders.png" class="navbar-brand mx-5 logo" alt="Cyberpunk fonts"></a>
@@ -29,6 +30,12 @@
         </div>
       </nav>
     </header>
-    <main class="w-100">{% block public_content %}{% endblock %}</main>  
+    <main class="w-100 conteudo-principal">{% block public_content %}{% endblock %}</main>  
+    <!--Rodapé-->
+    <footer class="py-3 bg-dark mt-0">
+      <div class="px-4 px-lg-5">
+          <p class="m-0 text-center text-white">Copyright &copy; Korú Team 3 2023</p>
+      </div>
+    </footer>
   </body>
 </html>

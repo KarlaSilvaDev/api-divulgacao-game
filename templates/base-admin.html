@@ -13,18 +13,24 @@
 
   <body>
     <!--Menu de Navegação--> 
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom ">
+      <nav class="navbar navbar-expand-md fixed-top">
         <a href="{{ url_for('home') }}" class="d-inline-flex link-body-emphasis text-decoration-none"><img src="https://see.fontimg.com/api/renderfont4/lg97d/eyJyIjoiZnMiLCJoIjo0NiwidyI6MTAwMCwiZnMiOjQ2LCJmZ2MiOiIjQzcxMkY0IiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/TmVvbiBTaGFkb3dz/cyberway-riders.png" class="navbar-brand mx-5 logo" alt="Cyberpunk fonts"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <ul class="navbar-nav">
-            <li class="nav-item active"><a class="nav-link" href="{{ url_for('home_admin') }}">LISTAR</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('adicionar_personagem') }}">ADICIONAR</a></li>
-          </ul>
+          <div class="navbar-nav">
+            <label>Personagens</label>
+            <a class="btn btn-outline-light mx-2" href="{{ url_for('home_admin') }}">Listar</a>
+            <a class="btn btn-outline-light mx-2" href="{{ url_for('adicionar_personagem') }}">Adicionar</a>
+            <label>Usuários</label>
+            <a class="btn btn-outline-light mx-2" href="{{ url_for('home_usuario_admin') }}">Listar</a>
+            <a class="btn btn-outline-light mx-2" href="{{ url_for('adicionar_usuario') }}">Adicionar</a>
+          </div>
         </div>
+
         <div class="col-md-3 text-end mx-5">
           <a class="btn btn-outline-light me-2" href="{{url_for('home')}}">Logout</a>
         </div>
@@ -32,14 +38,13 @@
     </header>
 
     <!--Conteúdo Principal-->
-    <main class="container">{% block content %}{% endblock %}</main>
+    <main class="container conteudo-principal">{% block content %}{% endblock %}</main>
 
     <!--Rodapé-->
-    <footer class="py-3 bg-dark">
+    <footer class="py-3 bg-dark mt-5 mb-0">
       <div class="px-4 px-lg-5">
           <p class="m-0 text-center text-white">Copyright &copy; Korú Team 3 2023</p>
       </div>
     </footer>
-
   </body>
 </html>

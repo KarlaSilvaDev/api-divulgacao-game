@@ -1,13 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
 body {
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
-    color: hsl(210, 10%, 35%)
+    color: hsl(210, 10%, 35%);
+}
+
+.navbar {
+    background-color: rgb(3, 0, 3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    height: 10vh;
+    color: white;
 }
 
 
+.conteudo-principal {
+    padding-top: 55px;
+}
 
-.navbar {
-    background-color: rgba(3, 0, 3, 0.9);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+footer {
     height: 10vh;
 }
