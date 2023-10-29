@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
 import db_utils
-from data import personagens, usuarios
 
 
 app = Flask(__name__)
@@ -18,8 +17,43 @@ def historia():
 
 @app.route("/personagens")
 def exibir_personagens():
-    lista_personagens = db_utils.listar(personagens)
+    lista_personagens = db_utils.retornar_personagens()
     return render_template("public/personagens.html", personagens=lista_personagens)
+
+
+# rota para atualizar, excluir e salvar um novo personagem
+@app.route("/admin/personagem/<int:id>", methods=["GET", "POST"])
+def editar_personagem(id):
+    if request.method == "POST":
+        if "excluir" in request.form:
+            db_utils.remover_personagem(id)
+            return redirect(url_for("home_admin"))
+        elif "salvar" in request.form:
+            id = request.form["id"]
+            nome = request.form["nome"]
+            classe = request.form["classe"]
+            forca = request.form["forca"]
+            destreza = request.form["id"]
+            inteligencia = request.form["destreza"]
+            idade = request.form["idade"]
+            habilidade = request.form["habilidade"]
+            historia = request.form["historia"]
+            imagem = request.form["imagem"]
+            dados_retornados = db_utils.retornar_personagem(id)
+            if dados_retornados:
+                db_utils.editar_personagem(id=id,  nome=nome, classe=classe, forca=forca, destreza=destreza,
+                                              inteligencia=inteligencia, idade=idade, habilidade=habilidade, historia=historia, imagem=imagem)
+            else:
+                db_utils.adicionar_personagem(nome=nome, classe=classe, forca=forca, destreza=destreza, inteligencia=inteligencia, idade=idade, habilidade=habilidade, historia=historia, imagem=imagem)
+
+            return redirect(url_for("exibir_personagens"))
+    else:
+        # Apenas retorna os dados de um personagem na página de cadastro
+        id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem = db_utils.retornar_personagem(
+            id)
+        return render_template("/admin/editar-personagem.html", id=id, nome=nome, classe=classe, forca=forca, destreza=destreza, inteligencia=inteligencia, idade=idade, habilidade=habilidade, historia=historia, imagem=imagem)
+
+    return redirect(url_for("home_admin"))
 
 
 @app.route("/login")
@@ -39,10 +73,8 @@ def tela_login():
 
 @app.route("/admin")
 def home_admin():
-    lista_personagens = db_utils.listar(personagens)
-    return render_template(
-        "admin/listar-personagens.html", personagens=lista_personagens
-    )
+    lista_personagens = db_utils.retornar_personagens()
+    return render_template("public/personagens.html", personagens=lista_personagens)
 
 
 # ADMIN: ROTA EDITAR PERSONAGEM
@@ -59,37 +91,6 @@ def home_admin():
 """
 
 
-@app.route("/admin/personagem/<int:id>", methods=["GET", "POST"])
-def editar_personagem(id):
-    if request.method == "POST":
-        if "excluir" in request.form:
-            db_utils.remover(id, personagens)
-            return redirect(url_for("home_admin"))
-        elif "salvar" in request.form:
-            personagem = {
-                chave: request.form[chave]
-                for chave in [
-                    "nome",
-                    "classe",
-                    "força",
-                    "destreza",
-                    "inteligência",
-                    "idade",
-                    "história",
-                    "imagem",
-                ]
-            }
-            if id in personagens.keys():
-                db_utils.atualizar(id, personagens, personagem)
-    else:
-        # Apenas retorna os dados de um personagem na página de cadastro
-        personagem = db_utils.detalhar_por_id(id, personagens)
-        personagem["id"] = id
-        return render_template("/admin/editar-personagem.html", **personagem)
-
-    return redirect(url_for("home_admin"))
-
-
 # ADMIN: ROTA ADICIONAR PERSONAGEM
 """
     FUNÇÕES DA ROTA:
@@ -103,7 +104,7 @@ def editar_personagem(id):
 """
 
 
-@app.route("/admin/personagem", methods=["GET", "POST"])
+""" @app.route("/admin/personagem", methods=["GET", "POST"])
 def adicionar_personagem():
     if request.method == "POST":
         personagem = {
@@ -126,7 +127,7 @@ def adicionar_personagem():
     else:
         return render_template(
             "admin/editar-personagem.html", id=db_utils.gerar_id(personagens)
-        )
+        ) """
 
 
 # ADMIN: ROTA HOME - LISTAR USUÁRIOS

@@ -3,7 +3,7 @@
 {% block content %}
 <div>
     <h1>Lista de Personagens</h1>
-    <a href="{{ url_for('adicionar_personagem')}}" class="btn btn-primary"> Adicionar</a>
+    <a href="{{ url_for('editar_personagem', id =0)}}" class="btn btn-primary"> Adicionar</a>
     <hr>
     <table class="table">
         <thead>
@@ -14,25 +14,27 @@
                 <th>Força</th>
                 <th>Destreza</th>
                 <th>Inteligência</th>
+                <th>Habilidade</th>
                 <th>Idade</th>
                 <th>História</th>
                 <th>Imagem</th>
             </tr>
         </thead>
         <tbody>
-            {% for id, personagem in personagens.items() %}
+            {% for id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
             <tr>
                 <td>{{ id }}</td>
-                <td><strong>{{ personagem['nome'] }}</strong></td>
-                <td>{{ personagem['classe'] }}</td>
-                <td>{{ personagem['força'] }}</td>
-                <td>{{ personagem['destreza'] }}</td>
-                <td>{{ personagem['inteligência'] }}</td>
-                <td>{{ personagem['idade'] }}</td>
-                <td>{{ personagem['história'] }}</td>
+                <td><strong>{{ nome }}</strong></td>
+                <td>{{ classe }}</td>
+                <td>{{ força }}</td>
+                <td>{{ destreza }}</td>
+                <td>{{ inteligência }}</td>
+                <td>{{ habilidade }}</td>
+                <td>{{ idade }}</td>
+                <td>{{ história }}</td>
                 <td>
-                    {% if personagem['imagem'] %}
-                        <img src="{{ personagem['imagem'] }}" alt="thumbnail" class="img-thumbnail">
+                    {% if imagem %}
+                        <img src="{{ imagem }}" alt="thumbnail" class="img-thumbnail">
                     {% else %}
                         <img src="../../static/img/personagens/no-image.png" class="img-thumbnail" />
                     {% endif %}

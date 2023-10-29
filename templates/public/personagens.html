@@ -25,16 +25,16 @@
         <div class="container">
 
             <div class="row">
-            {% for id, personagem in personagens.items() %}
+                {% for id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
                 <div class="col-md-4">
                     <div class="card mb-5 ">
                         <div class="card-header text-light">
-                            <h4 class="card-title">{{personagem["nome"]}}</h4>
-                            <p class="card-subtitle">{{personagem["classe"]}}</p>
+                            <h4 class="card-title">{{ nome }}</h4>
+                            <p class="card-subtitle">{{ classe }}</p>
                         </div>
-                        <img class="card-img-top" alt="Thumbnail [100%x225]" src="{{ personagem['imagem'] }}">
+                        <img class="card-img-top" alt="Thumbnail [100%x225]" src="{{ imagem }}">
 
-                        {% set historia = personagem['história'] if  personagem['história']|length <= 100 else personagem['história'][:100] ~ '...' %}
+                        {% set historia = "história" if  "história"|length <= 100 else personagem['história'][:100] ~ '...' %}
 
                         <div class="card-body">
                             <p class="card-text">{{historia}}</p>

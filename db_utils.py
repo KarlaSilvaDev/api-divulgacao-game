@@ -46,7 +46,7 @@ def retornar_personagem(id: int):
         return False
 
 # atualizar personagem
-def atualizar_personagem(id: int, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem):  # UPDATE - ATUALIZAR
+def editar_personagem(id: int, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem):  # UPDATE - ATUALIZAR
     try:
         # tentar atualizar
         conn = sqlite3.connect("database.db")

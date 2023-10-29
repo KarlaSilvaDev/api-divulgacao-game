@@ -24,7 +24,7 @@
           <div class="navbar-nav">
             <label>Personagens</label>
             <a class="btn btn-outline-light mx-2" href="{{ url_for('home_admin') }}">Listar</a>
-            <a class="btn btn-outline-light mx-2" href="{{ url_for('adicionar_personagem') }}">Adicionar</a>
+            <a class="btn btn-outline-light mx-2" href="{{  url_for('editar_personagem', id = id) }}">Adicionar</a>
             <label>Usuários</label>
             <a class="btn btn-outline-light mx-2" href="{{ url_for('home_usuario_admin') }}">Listar</a>
             <a class="btn btn-outline-light mx-2" href="{{ url_for('adicionar_usuario') }}">Adicionar</a>
