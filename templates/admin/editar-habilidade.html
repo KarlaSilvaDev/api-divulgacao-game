@@ -1,8 +1,7 @@
 <!--ADMIN: página que irá permitir o cadastro e edição do personagem-->
 {% extends 'base-admin.html' %}
 {% block content %}
-    <h1>Editar Usuario</h1>
-
+    <h1>Editar Habilidade</h1>
 
     <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
         <div class="form-group">
@@ -16,22 +15,16 @@
             <div class="invalid-feedback">Campo obrigatório.</div>
         </div>
         <div class="form-group">
-            <label for="login">Login:</label>
-            <input type="text" class="form-control" id="login" name="login" value="{{ login }}" required>
+            <label for="ocupacao">Descrição:</label>
+            <input type="text" class="form-control" id="descricao" name="descricao" value="{{ descricao }}" required>
             <div class="invalid-feedback">Campo obrigatório.</div>
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" name="email" value="{{email}}" required>
-            <div class="invalid-feedback">Campo obrigatório.</div>
-        </div>
-        <div class="form-group">
-            <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" name="senha" value="{{senha}}" required>
-            <div class="invalid-feedback">Campo obrigatório.</div>
-        </div>
+
         <input type="submit" class="btn btn-primary" name="salvar" value="salvar">
-        <a href="{{url_for('home_usuario_admin')}}" class="btn btn-secondary">Cancelar</a>
+        <a href="{{url_for('home_habilidade_admin')}}" class="btn btn-secondary">Cancelar</a>
         <input type="submit" class="btn btn-danger" name="excluir" value="excluir">
+
+
+
     </form>
 {% endblock %}

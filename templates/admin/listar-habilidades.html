@@ -2,28 +2,24 @@
 {% extends 'base-admin.html' %}
 {% block content %}
 <div>
-    <h1>Lista de Usuarios</h1>
-    <a href="{{ url_for('editar_usuario', id = 0)}}" class="btn btn-primary"> Adicionar</a>
+    <h1>Lista de Habilidadess</h1>
+    <a href="{{ url_for('editar_habilidade', id = 0)}}" class="btn btn-primary"> Adicionar</a>
     <hr>
     <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>Login</th>
-                <th>Email</th>
-                <th>Senha</th>
+                <th>Descrição</th>
             </tr>
         </thead>
         <tbody>
-            {% for id, nome, login, email, senha in usuarios %}
+            {% for id, nome, descricao in habilidades %}
             <tr>
                 <td>{{ id }}</td>
                 <td><strong>{{ nome }}</strong></td>
-                <td><strong>{{ login }}</strong></td>
-                <td>{{ email  }}</td>
-                <td>{{ senha }}</td>
-                <td><a href="{{ url_for('editar_usuario', id = id)}}">Editar</a></td>
+                <td>{{ descricao }}</td>
+                <td><a href="{{ url_for('editar_habilidade', id = id)}}">Editar</a></td>
             </tr>
             {% endfor %}
         </tbody>
