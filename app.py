@@ -15,7 +15,7 @@ def historia():
     return render_template("public/historia.html")
 
 
-@app.route("/personagens")  # OK
+@app.route("/personagens")
 def exibir_personagens():
     lista_personagens = db_utils.retornar_personagens()
     return render_template("public/personagens.html", personagens=lista_personagens)
@@ -26,8 +26,6 @@ def tela_login():
     return render_template("login.html")
 
 
-# PERSONAGENS
-
 @app.route("/admin")
 def home_admin():
     lista_personagens = db_utils.retornar_personagens()
@@ -37,7 +35,9 @@ def home_admin():
     )
 
 
-    # rota para atualizar, excluir e salvar um novo personagem
+    # rota para adicionar, atualizar, excluir e salvar um novo personagem
+
+
 @app.route("/admin/personagem/<int:id>", methods=["GET", "POST"])
 def editar_personagem(id):
     if request.method == "POST":
@@ -70,13 +70,11 @@ def editar_personagem(id):
 
     return redirect(url_for("home_admin"))
 
-# USUÁRIOS
 
 @app.route("/admin/usuarios")
 def home_usuario_admin():
     lista_usuarios = db_utils.retornar_usuarios()
     return render_template("admin/listar-usuarios.html", usuarios=lista_usuarios,) 
-
 
 
 @app.route("/admin/usuario/<int:id>", methods=["GET", "POST"])
@@ -107,13 +105,10 @@ def editar_usuario(id):
     return redirect(url_for("home_usuario_admin"))
 
 
-# HABILIDADES
-
 @app.route("/admin/habilidades")
 def home_habilidade_admin():
     lista_habilidades = db_utils.retornar_habilidades()
     return render_template("admin/listar-habilidades.html", habilidades=lista_habilidades) 
-
 
 
 @app.route("/admin/habilidade/<int:id>", methods=["GET", "POST"])
@@ -142,25 +137,22 @@ def editar_habilidade(id):
     return redirect(url_for("home_habilidade_admin"))
 
 
-
-#######################  API  #######################################
-#rota para retornanr todos personagens
+#######################  API  ########################
 @app.route("/api/personagens", methods=["GET"])
-def get_personagens():
+def listar_personagens():
     lista_personagens = db_utils.retornar_personagens()
     return jsonify(lista_personagens)
 
 
-#Rota para retornar um personagem
 @app.route("/api/personagem/<int:id>", methods=["GET"])
-def get_personagem(id):
+def detalhar_personagem(id):
     personagem = db_utils.retornar_personagem(id)
     if personagem:
-        return jsonify(personagem)
+        return jsonify(personagem), 200
     else:
         return jsonify({"message": "Personagem não encontrado!"}), 404  
 
-#rota para cadastrar personagem
+
 @app.route("/api/personagem", methods=["POST"])
 def criar_personagem():
     personagem = request.json
@@ -168,7 +160,7 @@ def criar_personagem():
     personagem["id"]= id_personagem
     return jsonify(personagem), 201 
 
-#Rota para alterar um personagem
+
 @app.route("/api/personagem/<int:id>", methods=["PUT"])
 def atualizar_personagem(id):
     personagem = db_utils.retornar_personagem(id)
@@ -176,23 +168,64 @@ def atualizar_personagem(id):
         dados_atualizados = request.json
         dados_atualizados["id"] = id
         db_utils.editar_personagem(**dados_atualizados)
-        return(jsonify(dados_atualizados))
+        return(jsonify(dados_atualizados)), 200
     else:
         return jsonify({"message": "Personagem não encontrado!"}), 404  
 
 
-
-#deletar personagem
 @app.route("/api/personagem/<int:id>", methods=["DELETE"])
 def remover_personagem(id):
     personagem = db_utils.retornar_personagem(id)
     if personagem:
         db_utils.remover_personagem(id)
-        return jsonify({"message": "Personagem Removido com Sucesso"})
+        return jsonify({"message": "Personagem Removido com Sucesso"}), 200 
     else:
         return jsonify({"message": "Personagem não encontrado"}) , 404
 
 
+@app.route("/api/habilidades", methods=["GET"])
+def listar_habilidades():
+    lista_habilidades = db_utils.retornar_habilidades()
+    return jsonify(lista_habilidades)
+
+
+@app.route("/api/habilidade/<int:id>", methods=["GET"])
+def detalhar_habilidade(id):
+    habilidade = db_utils.retornar_habilidade(id)
+    if habilidade:
+        return jsonify(habilidade), 200
+    else:
+        return jsonify({"message": "Habilidade não encontrada!"}), 404  
+
+
+@app.route("/api/habilidade", methods=["POST"])
+def criar_habilidade():
+    habilidade = request.json
+    id_habilidade = db_utils.adicionar_habilidade(**habilidade)
+    habilidade["id"]= id_habilidade
+    return jsonify(habilidade), 201 
+
+
+@app.route("/api/habilidade/<int:id>", methods=["PUT"])
+def atualizar_habilidade(id):
+    habilidade = db_utils.retornar_habilidade(id)
+    if habilidade:
+        dados_atualizados = request.json
+        dados_atualizados["id"] = id
+        db_utils.editar_habilidade(**dados_atualizados)
+        return(jsonify(dados_atualizados)), 200
+    else:
+        return jsonify({"message": "Habilidade não encontrada!"}), 404  
+
+
+@app.route("/api/personagem/<int:id>", methods=["DELETE"])
+def remover_personagem(id):
+    personagem = db_utils.retornar_personagem(id)
+    if personagem:
+        db_utils.remover_personagem(id)
+        return jsonify({"message": "Personagem Removido com Sucesso"}), 200 
+    else:
+        return jsonify({"message": "Personagem não encontrado"}) , 404
 
 
 app.run(debug=True)
