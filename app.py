@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, jsonify, make_response ,request, redirect, url_for
 import db_utils
 
 
@@ -141,6 +141,56 @@ def editar_habilidade(id):
 
     return redirect(url_for("home_habilidade_admin"))
 
+
+
+#######################  API  #######################################
+#rota para retornanr todos personagens
+@app.route("/api/personagens", methods=["GET"])
+def get_personagens():
+    lista_personagens = db_utils.retornar_personagens()
+    return jsonify(lista_personagens)
+
+
+#Rota para retornar um personagem
+@app.route("/api/personagem/<int:id>", methods=["GET"])
+def get_personagem(id):
+    personagem = db_utils.retornar_personagem(id)
+    if personagem:
+        return jsonify(personagem)
+    else:
+        return jsonify({"message": "Personagem não encontrado!"}), 404  
+
+#rota para cadastrar personagem
+@app.route("/api/personagem", methods=["POST"])
+def criar_personagem():
+    personagem = request.json
+    id_personagem = db_utils.adicionar_personagem(**personagem)
+    personagem["id"]= id_personagem
+    return jsonify(personagem), 201 
+
+#Rota para alterar um personagem
+@app.route("/api/personagem/<int:id>", methods=["PUT"])
+def atualizar_personagem(id):
+    personagem = db_utils.retornar_personagem(id)
+    if personagem:
+        dados_atualizados = request.json
+        dados_atualizados["id"] = id
+        db_utils.editar_personagem(**dados_atualizados)
+        return(jsonify(dados_atualizados))
+    else:
+        return jsonify({"message": "Personagem não encontrado!"}), 404  
+
+
+
+#deletar personagem
+@app.route("/api/personagem/<int:id>", methods=["DELETE"])
+def remover_personagem(id):
+    personagem = db_utils.retornar_personagem(id)
+    if personagem:
+        db_utils.remover_personagem(id)
+        return jsonify({"message": "Personagem Removido com Sucesso"})
+    else:
+        return jsonify({"message": "Personagem não encontrado"}) , 404
 
 
 
