@@ -1,58 +1,5 @@
 {% extends 'base-public.html'%} 
 
-{% block styles %}
-  <link rel="stylesheet" href="{{url_for('static', filename = 'css/index.css')}}"/>
-{% endblock %}
-
 {% block public_content %}
-<div>
-  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="video-wrap">
-          <div id="video" class="cont">
-            <video id="bgvid" autoplay loop muted playsinline>
-              <source src="/static/videos/video-home.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-  
-        <div class="container">
-          <div class="call carousel-caption text-start w-50 p-5">
-            <h2>O melhor game Cyperpunk!</h2>
-            <p class="opacity-75">Adentre um mundo distópico e cibernético, onde as fronteiras entre o real e o virtual desapareceram, e o poder está nas mãos de corporações impiedosas e facções rebeldes. Neste cenário sombrio, emerge um renegado solitário, conhecido apenas como 'Enigma'. Sua jornada o levará através de um labirinto de segredos insondáveis, tecnologia avançada e traições mortais.</p>
-            <p><a class="btn btn-lg btn-dark" href="{{ url_for('historia')}}">Conheça a história do jogo</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="carousel-image">
-          <img class="w-100" src="/static/img/index_carrossel2.jpg">
-        </div>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
-
+<section class="d-flex justify-content-center align-items-center overflow-hidden"></section>
 {% endblock %}

@@ -218,14 +218,14 @@ def atualizar_habilidade(id):
         return jsonify({"message": "Habilidade não encontrada!"}), 404  
 
 
-@app.route("/api/personagem/<int:id>", methods=["DELETE"])
-def remover_personagem(id):
-    personagem = db_utils.retornar_personagem(id)
-    if personagem:
-        db_utils.remover_personagem(id)
-        return jsonify({"message": "Personagem Removido com Sucesso"}), 200 
+@app.route("/api/habilidade/<int:id>", methods=["DELETE"])
+def remover_habilidade(id):
+    habilidade = db_utils.retornar_habilidade(id)
+    if habilidade:
+        db_utils.remover_habilidade(id)
+        return jsonify({"message": "Habilidade removida com Sucesso"}), 200 
     else:
-        return jsonify({"message": "Personagem não encontrado"}) , 404
+        return jsonify({"message": "Habilidade não encontrada"}) , 404
 
 
 app.run(debug=True)
