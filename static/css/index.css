@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: space-around;
+
+}
+
+section{
+    padding: 1%;
+    margin-top: 1%;
+    display: flex;
+    max-height: 25%;
+   
+}
+.ico-home{
+
+}
+
+
+.texto-home{
+    width: 50%;
+    background-color: blueviolet;
+    margin-right: 3%;
+   
+   
+}
+.carousel-home{
+   width: 50%;
+
+}
+.img-home1 img{
+    max-width:300px;
+    border-radius: 100%;
+
+}
+
+.icon-home img{
+    max-width:30px;
+    border-radius: 100%; 
+    flex:block;
+    margin-bottom: 3px;
+}
