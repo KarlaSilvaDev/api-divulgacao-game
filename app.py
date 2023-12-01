@@ -14,6 +14,10 @@ def home():
 def historia():
     return render_template("public/historia.html")
 
+@app.route("/jogo")
+def jogo():
+    return render_template("public/jogo.html")
+
 
 @app.route("/personagens")
 def exibir_personagens():
