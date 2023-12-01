@@ -5,6 +5,10 @@
     justify-content: space-around;
 
 }
+body{
+    background-color: #452559;
+    color:aliceblue
+}
 
 section{
     padding: 1%;
@@ -20,8 +24,10 @@ section{
 
 .texto-home{
     width: 50%;
-    background-color: blueviolet;
-    margin-right: 3%;
+    margin: 5px;
+    border: 1px solid #E052F2;
+    padding: 10px;
+    border-radius: 10px;
    
    
 }
@@ -36,8 +42,18 @@ section{
 }
 
 .icon-home img{
-    max-width:30px;
+    max-width:50px;
     border-radius: 100%; 
     flex:block;
     margin-bottom: 3px;
+    
+}
+
+button{
+    margin:5px;
+    color: #452559;
+    background-color: #452559
+   
+   
+   
 }
