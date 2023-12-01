@@ -1,0 +1,118 @@
+{% extends 'base-public.html'%}
+
+{% block styles %}
+
+{% endblock %}
+{% block public_content %}
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/index.css')}}" />
+<section class="d-flex justify-content-space-between align-items-center overflow-hidden">
+    <div class="texto-home d-flex justify-content-center">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper lacus metus, nec tempor sapien
+            blandit eget. Proin non mauris tincidunt, sollicitudin nisl a, fringilla tellus. Etiam ex urna, congue sed
+            feugiat in, egestas ac nulla. Curabitur malesuada magna varius, dapibus velit et, dapibus ipsum. Vivamus
+            mattis venenatis iaculis. Donec luctus diam orci, vestibulum vehicula ipsum condimentum id. Suspendisse non
+            pharetra purus. Suspendisse potenti. Aenean eu massa porta nisi interdum ullamcorper nec non augue. Ut nec
+            orci elementum, aliquam odio in, finibus mi. Aenean a facilisis purus. Praesent ultricies fringilla est, non
+            viverra libero scelerisque at. Morbi blandit ex eu condimentum rhoncus. Nullam fringilla vehicula sem, sed
+            porta odio efficitur ac.</p>
+    </div>
+    <div class="carousel-home">
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item img-fluid active">
+                    <img src="/static/img/index_carrossel2.jpg" alt="...">
+                </div>
+                <div class="carousel-item img-fluid">
+                    <img src="/static/img/personagens/background-personagens.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próxima</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="d-flex justify-content-space-between align-items-center overflow-hidden">
+    <div class="texto-home d-flex justify-content-center">
+        <p>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper lacus metus, nec tempor sapien
+            blandit eget. Proin non mauris tincidunt, sollicitudin nisl a, fringilla tellus. Etiam ex urna, congue sed
+            feugiat in, egestas ac nulla. Curabitur malesuada magna varius, dapibus velit et, dapibus ipsum. Vivamus
+            mattis venenatis iaculis. Donec luctus diam orci, vestibulum vehicula ipsum condimentum id. Suspendisse non
+            pharetra purus. Suspendisse potenti. Aenean eu massa porta nisi interdum ullamcorper nec non augue. Ut nec
+            orci elementum, aliquam odio in, finibus mi. Aenean a facilisis purus. Praesent ultricies fringilla est, non
+            viverra libero scelerisque at. Morbi blandit ex eu condimentum rhoncus. Nullam fringilla vehicula sem, sed
+            porta odio efficitur ac.
+
+        </p>
+    </div>
+
+    <div class="d-flex justify-content-center img-home1">
+        <img src="/static/img/personagens/1.jpg" class="">
+    </div>
+
+</section>
+<section class="d-flex justify-content-space-between align-items-center display-block overflow-hidden">
+    <div class="icon-home">
+        <div>
+            <img src="/static/img/personagens/1.jpg" class="">
+        </div>
+        <div>
+            <img src="/static/img/personagens/1.jpg" class="">
+        </div>
+        <div>
+            <img src="/static/img/personagens/1.jpg" class="">
+        </div>
+        <div>
+            <img src="/static/img/personagens/1.jpg" class="">
+        </div>
+        <div>
+            <img src="/static/img/personagens/1.jpg" class="">
+        </div>
+    </div>
+    <div class="texto-home d-flex justify-content-center">
+        <div class="display-block">
+            <p>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper lacus metus, nec tempor
+                sapien
+                blandit eget. Proin non mauris tincidunt, sollicitudin nisl a, fringilla tellus. Etiam ex urna, congue
+                sed
+                feugiat in, egestas ac nulla. Curabitur malesuada magna varius, dapibus velit et, dapibus ipsum. Vivamus
+                mattis venenatis iaculis. Donec luctus diam orci, vestibulum vehicula ipsum condimentum id. Suspendisse
+                non
+                pharetra purus. Suspendisse potenti. Aenean eu massa porta nisi interdum ullamcorper nec non augue. Ut
+                nec
+                orci elementum, aliquam odio in, finibus mi. Aenean a facilisis purus. Praesent ultricies fringilla est,
+                non
+                viverra libero scelerisque at. Morbi blandit ex eu condimentum rhoncus. Nullam fringilla vehicula sem,
+                sed
+                porta odio efficitur ac.
+
+            </p>
+        </div>
+
+        <div class="display-block">
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center img-home1">
+        <img src="/static/img/personagens/1.jpg" class="">
+
+    </div>
+
+
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
+{% extends 'base-admin.html' %}
+{% block content %}
+<div>
+    <h1>Lista de Usuarios</h1>
+    <a href="{{ url_for('editar_usuario', id = 0)}}" class="btn btn-primary"> Adicionar</a>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Login</th>
+                <th>Email</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for id, nome, login, email, senha in usuarios %}
+            <tr>
+                <td>{{ id }}</td>
+                <td><strong>{{ nome }}</strong></td>
+                <td><strong>{{ login }}</strong></td>
+                <td>{{ email  }}</td>
+                <td>{{ senha }}</td>
+                <td><a href="{{ url_for('editar_usuario', id = id)}}">Editar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
