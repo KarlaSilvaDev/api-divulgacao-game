@@ -36,16 +36,18 @@ section{
 
 }
 .img-home1 img{
-    max-width:300px;
+    max-width:500px;
     border-radius: 100%;
+
 
 }
 
 .icon-home img{
-    max-width:50px;
+    max-width:100px;
     border-radius: 100%; 
     flex:block;
-    margin-bottom: 3px;
+    padding: 5px;
+    align-items: center;
     
 }
 
@@ -56,4 +58,7 @@ button{
    
    
    
+}
+h4{
+    text-align: center;
 }
