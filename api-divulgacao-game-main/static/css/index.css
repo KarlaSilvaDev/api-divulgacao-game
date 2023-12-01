@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: space-around;
+
+}
+body{
+    background-color: #452559;
+    color:aliceblue
+}
+
+section{
+    padding: 1%;
+    margin-top: 1%;
+    display: flex;
+    max-height: 25%;
+   
+}
+.ico-home{
+
+}
+
+
+.texto-home{
+    width: 50%;
+    margin: 5px;
+    border: 1px solid #E052F2;
+    padding: 10px;
+    border-radius: 10px;
+   
+   
+}
+.carousel-home{
+   width: 50%;
+
+}
+.img-home1 img{
+    max-width:500px;
+    border-radius: 100%;
+
+
+}
+
+.icon-home img{
+    max-width:100px;
+    border-radius: 100%; 
+    flex:block;
+    padding: 5px;
+    align-items: center;
+    
+}
+
+button{
+    margin:5px;
+    color: #452559;
+    background-color: #452559
+   
+   
+   
+}
+h4{
+    text-align: center;
+}
