@@ -1,19 +1,20 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body{
+body {
     background-color: #452559;
-}
-.titulo{
     color: #fff;
 }
-.video_square{
-    font-family: "Press Start 2P", cursive;
+
+.titulo {
+    color: #fff;
 }
 
 .video_square {
+    font-family: "Press Start 2P", cursive;
     position: relative;
     max-width: 1800px; /* ou o tamanho desejado */
     margin: 20px auto;
@@ -48,28 +49,51 @@ video {
     margin: 0;
 }
 
-
-
 .objetivo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px;
-  }
-  .imagem-objetivo{
-    width: 25em;
-  }
-  .imagem-objetivo img {
-    width: 100%; /* Garante que a imagem ocupa 100% da largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 12px;
-  }
+}
 
-  .texto-objetivo {
+.imagem-objetivo {
+    width: 25em;
+}
+
+.imagem-objetivo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.texto-objetivo {
     color: #fff;
-    width: 50%; /* Ajuste conforme necessário */
-    padding: 0 20px; /* Adiciona algum espaçamento ao redor do texto */
+    width: 50%;
+    padding: 0 20px;
     background-color: rgba(161, 161, 161, 0.233);
     border-radius: 12px;
     padding: 10px;
-  }
+}
+
+body.modo-noturno {
+    background-color: #111;
+    color: #ddd;
+}
+
+.modo-noturno .titulo,
+.modo-noturno .texto-sobre-video,
+.modo-noturno .texto-objetivo {
+    color: #ddd;
+}
+
+.modo-noturno .video_square {
+    border: 2px solid #ddd;
+}
+
+.modo-noturno .video_square .texto-sobre-video {
+    background-color: #3333339c;
+}
+
+.modo-noturno .objetivo {
+    background-color: rgba(161, 161, 161, 0.233);
+}
