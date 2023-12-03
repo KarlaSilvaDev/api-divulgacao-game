@@ -1,3 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #452559;
+}
+.titulo{
+    color: #fff;
+}
 .video_square{
     font-family: "Press Start 2P", cursive;
 }
@@ -36,3 +47,29 @@ video {
     font-size: 1.2em;
     margin: 0;
 }
+
+
+
+.objetivo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+  }
+  .imagem-objetivo{
+    width: 25em;
+  }
+  .imagem-objetivo img {
+    width: 100%; /* Garante que a imagem ocupa 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 12px;
+  }
+
+  .texto-objetivo {
+    color: #fff;
+    width: 50%; /* Ajuste conforme necessário */
+    padding: 0 20px; /* Adiciona algum espaçamento ao redor do texto */
+    background-color: rgba(161, 161, 161, 0.233);
+    border-radius: 12px;
+    padding: 10px;
+  }
