@@ -81,19 +81,28 @@
 
 <section class="d-flex justify-content-space-between align-items-center overflow-hidden">
     <div class="icon-home d-flex flex-column">
-        <a><img id="habilidade-atirador" src="/static/img/home/acrobata_urbano.jpg" title="Acrobata Urbano" onclick="mudaHabilidadeAcrobata()"></a>
-        <img id="habilidade-atirador" src="/static/img/home/atirador_elite.jpg" title="Atirador de elite" class="">
-        <img id="habilidade-engenheiro" src="/static/img/home/engenheiro_drone.jpg" title="Engenheiro de Drone"
+        <a><img id="habilidade-acrobata" src="/static/img/home/acrobata_urbano.jpg" title="Acrobata Urbano"
+                onclick="mudaHabilidadeAcrobata()"></a>
+        <img id="habilidade-atirador" src="/static/img/home/atirador_elite.jpg" onclick="mudaHabilidadeAtiradoraElite()"
+            title="Atiradora de elite" class="">
+        <img id="habilidade-engenheiro" src="/static/img/home/engenheiro_drone.jpg" onclick="mudaHabilidadeEngenheiraDrone()"title="Engenheira de Drone"
             class="">
-        <img id="habilidade-hacker" src="/static/img/home/hacker.jpg" title="Hacker" class="">
-        <img id="habilidade-mestra" src="/static/img/home/mestra_combate_corpo_a_corpo.jpg.jpg" title="Mestra em luta"
-            class="">
+        <img id="habilidade-hacker" src="/static/img/home/hacker.jpg" onclick="mudaHabilidadeHacker()"title="Hacker" class="">
+        <img id="habilidade-mestre" src="/static/img/home/mestra_combate.jpg" onclick="mudaHabilidadeMestreCombate()"title="Mestre combate" class="">
     </div>
     <div class="texto-home justify-content-center">
         <div>
-            
+
             <h4 id="titulo-habilidade">Habilidade exclusiva</h4>
-            <p id="resumo-habilidade">Em um universo repleto de desafios, cada personagem no jogo traz consigo uma habilidade única, fundamental para estratégia e jogabilidade. Essas habilidades não apenas enriquecem a narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em diferentes situações. A escolha do personagem não é apenas estética, mas estratégica, permitindo aos jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As habilidades únicas não só diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça do jogo, e suas habilidades únicas desempenham um papel crucial na exploração, estratégia e sucesso global.
+            <p id="resumo-habilidade">Em um universo repleto de desafios, cada personagem no jogo traz consigo uma
+                habilidade única, fundamental para estratégia e jogabilidade. Essas habilidades não apenas enriquecem a
+                narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em
+                diferentes situações. A escolha do personagem não é apenas estética, mas estratégica, permitindo aos
+                jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As habilidades únicas não só
+                diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma
+                jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça
+                do jogo, e suas habilidades únicas desempenham um papel crucial na exploração, estratégia e sucesso
+                global.
 
             </p>
             <p id="verMais1"></p>
@@ -104,15 +113,16 @@
 
         </div>
         <div class="d-flex justify-content-space-around ">
-            <button id="verMais" type="button" class="btn btn-light " onclick="verMaisAcrobata()">Ver mais</button>
+            <button id="verMais" type="button" class="btn btn-light " onclick="verMais()">Ver mais</button>
         </div>
         <div class="d-flex justify-content-space-around ">
-            <button id = "verMenos" type="button" class="btn btn-light " display=none onclick="verMenos()">Ver menos</button>
+            <button id="verMenos" type="button" class="btn btn-light " display=none onclick="verMenos()">Ver
+                menos</button>
         </div>
 
     </div>
     <div id="foto-personagem-habilidade" class="d-flex justify-content-center img-home1">
-        <img src="/static/img/personagens/1.jpg" class="">
+        <img id="img-personagem-home" src="">
     </div>
 </section>
 <div class="d-flex flex-row-reverse p-2">
