@@ -1,9 +1,14 @@
 document.getElementById("verMais").style.display = "none";
 document.getElementById("verMenos").style.display = "none";
 
+
 // ACROBATA
 
 function mudaHabilidadeAcrobata() {
+    document.getElementById('habilidade-atirador').style.border = 'none';
+    document.getElementById('habilidade-mestre').style.border = 'none';
+    document.getElementById('habilidade-hacker').style.border = 'none';
+    document.getElementById('habilidade-engenheiro').style.border = 'none';
 
     document.getElementById("habilidade-acrobata").style.border = "2px solid white";
     document.getElementById("titulo-habilidade").innerHTML = "Acrobata urbano";
@@ -11,8 +16,14 @@ function mudaHabilidadeAcrobata() {
     document.getElementById("img-personagem-home").src = "/static/img/personagens/acrobata.jpg";
     if (document.getElementById("verMais1").innerHTML === "") {
         document.getElementById("verMais").style.display = "block";
+       
 
     }
+    document.getElementById("verMais1").innerHTML = ""
+    document.getElementById("verMais2").innerHTML = ""
+    document.getElementById("verMais3").innerHTML = ""
+    document.getElementById("verMenos").style.display = "none";
+    document.getElementById("verMais").style.display = "block";
 
 }
 
@@ -21,6 +32,10 @@ function mudaHabilidadeAcrobata() {
 
 
 function mudaHabilidadeAtiradoraElite() {
+    document.getElementById('habilidade-acrobata').style.border = 'none';
+    document.getElementById('habilidade-mestre').style.border = 'none';
+    document.getElementById('habilidade-hacker').style.border = 'none';
+    document.getElementById('habilidade-engenheiro').style.border = 'none';
     document.getElementById("habilidade-atirador").style.border = "2px solid white";
     document.getElementById("titulo-habilidade").innerHTML = "Atiradora de elite";
     document.getElementById("resumo-habilidade").innerHTML = "A Atiradora de Elite, em um cenário futurista, traz consigo habilidades únicas que a destacam no campo de batalha. Sua perícia excepcional com armas de longo alcance e habilidades táticas tornam-na uma força crucial para estratégias de equipe e confrontos à distância.";
@@ -29,12 +44,21 @@ function mudaHabilidadeAtiradoraElite() {
         document.getElementById("verMais").style.display = "block";
 
     }
-
+    
+    document.getElementById("verMais1").innerHTML = ""
+    document.getElementById("verMais2").innerHTML = ""
+    document.getElementById("verMais3").innerHTML = ""
+    document.getElementById("verMenos").style.display = "none";
+    document.getElementById("verMais").style.display = "block";
 }
 
 // ENGENHEIRA DE DRONE
 
 function mudaHabilidadeEngenheiraDrone() {
+    document.getElementById('habilidade-acrobata').style.border = 'none';
+    document.getElementById('habilidade-atirador').style.border = 'none';
+    document.getElementById('habilidade-mestre').style.border = 'none';
+    document.getElementById('habilidade-hacker').style.border = 'none';
 
     document.getElementById("habilidade-engenheiro").style.border = "2px solid white";
     document.getElementById("titulo-habilidade").innerHTML = "Engenheira de drone";
@@ -44,7 +68,11 @@ function mudaHabilidadeEngenheiraDrone() {
         document.getElementById("verMais").style.display = "block";
 
     }
-
+    document.getElementById("verMais1").innerHTML = ""
+    document.getElementById("verMais2").innerHTML = ""
+    document.getElementById("verMais3").innerHTML = ""
+    document.getElementById("verMenos").style.display = "none";
+    document.getElementById("verMais").style.display = "block";
 }
 
 
@@ -52,6 +80,14 @@ function mudaHabilidadeEngenheiraDrone() {
 //HACKER
 
 function mudaHabilidadeHacker() {
+    document.getElementById('habilidade-acrobata').style.border = 'none';
+    document.getElementById('habilidade-atirador').style.border = 'none';
+    document.getElementById('habilidade-mestre').style.border = 'none';
+    document.getElementById('habilidade-engenheiro').style.border = 'none';
+
+    document.getElementById("verMais1").innerHTML = ""
+    document.getElementById("verMais2").innerHTML = ""
+    document.getElementById("verMais3").innerHTML = ""
 
     document.getElementById("habilidade-hacker").style.border = "2px solid white";
     document.getElementById("titulo-habilidade").innerHTML = "Hacker";
@@ -61,12 +97,22 @@ function mudaHabilidadeHacker() {
         document.getElementById("verMais").style.display = "block";
 
     }
+    document.getElementById("verMenos").style.display = "none";
+    document.getElementById("verMais").style.display = "block";
+   
 
 }
 
 //MESTRA COMBATE
 
 function mudaHabilidadeMestreCombate() {
+    document.getElementById('habilidade-acrobata').style.border = 'none';
+    document.getElementById('habilidade-atirador').style.border = 'none';
+    document.getElementById('habilidade-hacker').style.border = 'none';
+    document.getElementById('habilidade-engenheiro').style.border = 'none';
+    document.getElementById("verMais1").innerHTML = ""
+    document.getElementById("verMais2").innerHTML = ""
+    document.getElementById("verMais3").innerHTML = ""
     document.getElementById("habilidade-mestre").style.border = "2px solid white";
     document.getElementById("titulo-habilidade").innerHTML = "Mestre em combate";
     document.getElementById("resumo-habilidade").innerHTML = "A Mestre em Combate é uma guerreira habilidosa em um cenário futurista, destacando-se por suas proezas físicas e expertise em diversas formas de combate. Sua presença no campo de batalha é marcada por uma combinação única de força bruta, agilidade impressionante e táticas de combate estratégicas.";
@@ -75,7 +121,9 @@ function mudaHabilidadeMestreCombate() {
         document.getElementById("verMais").style.display = "block";
 
     }
-
+   
+    document.getElementById("verMenos").style.display = "none";
+    document.getElementById("verMais").style.display = "block";
 }
 
 
@@ -111,7 +159,7 @@ function verMais() {
         document.getElementById("verMenos").style.display = "block";
 
     }
-    else if (document.getElementById("titulo-habilidade").innerHTML === "Mestre combate") {
+    else if (document.getElementById("titulo-habilidade").innerHTML === "Mestre em combate") {
         document.getElementById("verMais1").innerHTML = "Golpes especiais aprimorados: Desenvolvimento de golpes especiais aprimorados, incluindo ataques energizados ou técnicas de desarme avançadas. Essas habilidades únicas proporcionam à Mestre em Combate uma vantagem adicional durante os confrontos."
         document.getElementById("verMais2").innerHTML = "Técnicas de combate corpo a corpo: Expertise em técnicas avançadas de combate corpo a corpo, incluindo artes marciais futuristas e manobras acrobáticas. A Mestre em Combate pode enfrentar inimigos em proximidade com eficiência e estilo."
         document.getElementById("verMais3").innerHTML = "Reação rápida: Refletores neuromusculares e treinamento especializado concedem à Mestre em Combate uma notável reação rápida, permitindo esquivas ágeis e respostas instantâneas a ameaças."
