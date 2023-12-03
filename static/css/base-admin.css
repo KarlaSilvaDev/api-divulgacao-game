@@ -5,10 +5,10 @@
 }
 
 
-body{
+body {
     background-color: #452559;
     margin: 0;
- 
+
 }
 
 :root {
@@ -33,4 +33,20 @@ footer p,
 
 section {
     height: 80vh;
+}
+
+
+.table th,
+td {
+    color: whitesmoke;
+    background-color: #0D8C75;
+    align-items: center;
+}
+
+.table th,
+td,
+tr {
+    color: whitesmoke;
+    background-color: #0D8C75;
+    align-items: center;
 }

@@ -116,7 +116,7 @@ function mudaHabilidadeMestreCombate() {
     document.getElementById("habilidade-mestre").style.border = "2px solid white";
     document.getElementById("titulo-habilidade").innerHTML = "Mestre em combate";
     document.getElementById("resumo-habilidade").innerHTML = "A Mestre em Combate é uma guerreira habilidosa em um cenário futurista, destacando-se por suas proezas físicas e expertise em diversas formas de combate. Sua presença no campo de batalha é marcada por uma combinação única de força bruta, agilidade impressionante e táticas de combate estratégicas.";
-    document.getElementById("img-personagem-home").src = "/static/img/personagens/mestra-combate.jpg";
+    document.getElementById("img-personagem-home").src = "/static/img/personagens/mestra_combate.jpg";
     if (document.getElementById("verMais1").innerHTML === "") {
         document.getElementById("verMais").style.display = "block";
 

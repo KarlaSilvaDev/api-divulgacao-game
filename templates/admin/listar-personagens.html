@@ -2,8 +2,7 @@
 {% extends 'base-admin.html' %}
 {% block content %}
 <div>
-    <hr>
-    <table class="table">
+    <table class="table table-hover table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -16,6 +15,7 @@
                 <th>Habilidade</th>
                 <th>História</th>
                 <th>Imagem</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +37,8 @@
                         <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-thumbnail" />
                     {% endif %}
                 </td>
-                <td><a href="{{ url_for('editar_personagem', id = id)}}">Editar</a></td>
+                <td> <a href="{{ url_for('editar_personagem', id = id)}}" class="btn btn-light">Editar</a></td>
+               
             </tr>
             {% endfor %}
         </tbody>

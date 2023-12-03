@@ -7,7 +7,7 @@
 }
 body{
     background-color: #452559;
-    color:aliceblue
+ 
 }
 
 section{
@@ -28,6 +28,7 @@ section{
     border: 1px solid #E052F2;
     padding: 10px;
     border-radius: 10px;
+    color:whitesmoke;
    
    
 }
