@@ -34,7 +34,10 @@ footer p,
 section {
     height: 80vh;
 }
+.form-group label, p{
+    color:whitesmoke
 
+}
 
 .table th,
 td {
@@ -49,4 +52,20 @@ tr {
     color: whitesmoke;
     background-color: #0D8C75;
     align-items: center;
+}
+.form-label{
+  color: whitesmoke; 
+}
+.formulario-cadastro{
+    display:flex;
+}
+  
+.form-group input{
+   padding:10px;
+   margin:10px;
+   justify-content: space-around;
+    
+}
+.row{
+    display:inline-flex;
 }
