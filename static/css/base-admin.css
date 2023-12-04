@@ -56,16 +56,11 @@ tr {
 .form-label{
   color: whitesmoke; 
 }
-.formulario-cadastro{
-    display:flex;
-}
   
-.form-group input{
-   padding:10px;
-   margin:10px;
-   justify-content: space-around;
-    
+input, a{
+    margin-bottom: 10px;
 }
-.row{
-    display:inline-flex;
+
+a {
+    text-decoration: none;
 }
