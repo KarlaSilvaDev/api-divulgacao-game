@@ -8,6 +8,8 @@
     border: 2px solid #0D8C75;
     background-color: #452559;
     color: whitesmoke;
+    height: 90%;
+    padding:  10px;
   
 }
 
@@ -42,6 +44,14 @@
 }
 
 .text-light{
+    color:whitesmoke;
+}
+
+.modal-content{
+    background-color:#452559 ;
+}
+
+.modal-body, .modal-title, .modal-header{
     color:whitesmoke;
 }
 
