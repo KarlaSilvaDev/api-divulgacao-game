@@ -1,103 +1,104 @@
 <!--ADMIN: página que irá permitir o cadastro e edição do personagem-->
 {% extends 'base-admin.html' %}
 {% block content %}
+<div class="editar-admin">
+    <form method="POST" enctype="multipart/form-data" action="" class="needs-validation " data-toggle="validator">
 
-<form method="POST" enctype="multipart/form-data" action="" class="needs-validation " data-toggle="validator">
-
-    <div class="row">
-        <div class=" col form-group container">
-            <label for="id">ID:</label>
-            <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
-            <div class="invalid-feedback">Campo obrigatório.</div>
-        </div>
-        <div class=" col form-group container">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
-            <div class="invalid-feedback">Campo obrigatório.</div>
-        </div>
-        <div class="col form-group container"> <label for="idade">Idade:</label>
-            <input type="number" class="form-control" id="idade" name="idade" value="{{ idade }}" required>
-            <div class="invalid-feedback">Campo obrigatório.</div>
-        </div>
-
-
-
-    </div>
-    <div class="row">
-        <div class="col form-group container">
-            <label for="forca" class="form-label">Força:</label>
-            <input type="range" class="form-range" min="0" max="10" id="forca" name="forca" value="{{ forca }}"
-                required>
-        </div>
-        <div class="col form-group container"><label for="destreza" class="form-label">Destreza:</label>
-            <input type="range" class="form-range " min="0" max="10" class="form-control" id="destreza" name="destreza"
-                value="{{ destreza }}" required>
-        </div>
-        <div class="col form-group container"><label for="inteligencia" class="form-label">Inteligência:</label>
-            <input type="range" class="form-range" min="0" max="10" id="inteligencia" name="inteligencia"
-                value="{{ inteligencia }}" required>
-        </div>
-    </div>
-
-    <!--Atributos: id, nome, classe, força, destreza, inteligência, idade, história, imagem-->
-    <div class="row">
-        <div class="col form-group container">
-            <label for="exampleFormControlSelect1">Ocupação:</label>
-            <select class="form-control" id="ocupacao" name="ocupacao" value="{{ ocupacao }}">
-                <option></option>
-                <option>Ciborgue</option>
-                <option>Humano</option>
-                <option>Robô</option>
-            </select>
-        </div>
-
-        <div class="col form-group container">
-            <label for="exampleFormControlSelect1">Habilidade única:</label>
-            <select class="form-control" id="habilidade" name="habilidade" value="{{ habilidade }}">
-                <option></option>
-                <option>Acrobacia urbana</option>
-                <option>Atirador de elite</option>
-                <option>Engenheiro de Drone</option>
-                <option>Hacker</option>
-                <option>Mestre em combate</option>
-            </select>
-        </div>
         <div class="row">
-            <div class="col form-group  container">
-
-                <label for="história">História:</label>
-                <input type="textarea" class="form-control" id="historia" name="historia" value="{{ historia }}">
+            <div class=" col form-group container">
+                <label for="id">ID:</label>
+                <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
+                <div class="invalid-feedback">Campo obrigatório.</div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col form-group  container">
-                <label for="imagem">Imagem:</label>
+            <div class=" col form-group container">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
+                <div class="invalid-feedback">Campo obrigatório.</div>
+            </div>
+            <div class="col form-group container"> <label for="idade">Idade:</label>
+                <input type="number" class="form-control" id="idade" name="idade" value="{{ idade }}" required>
+                <div class="invalid-feedback">Campo obrigatório.</div>
             </div>
 
-            <input type="text" class="form-group  mb-4" id="imagem" name="imagem" value="{{ imagem }}">
+
+
+        </div>
+        <div class="row">
+            <div class="col form-group container">
+                <label for="forca" class="form-label">Força:</label>
+                <input type="range" class="form-range" min="0" max="10" id="forca" name="forca" value="{{ forca }}"
+                    required>
+            </div>
+            <div class="col form-group container"><label for="destreza" class="form-label">Destreza:</label>
+                <input type="range" class="form-range " min="0" max="10" class="form-control" id="destreza"
+                    name="destreza" value="{{ destreza }}" required>
+            </div>
+            <div class="col form-group container"><label for="inteligencia" class="form-label">Inteligência:</label>
+                <input type="range" class="form-range" min="0" max="10" id="inteligencia" name="inteligencia"
+                    value="{{ inteligencia }}" required>
+            </div>
         </div>
 
-    </div>
-    {% if imagem %}
-    </div>
-    <div class="row">
-        <div class="col form-group  container">
-            <img src="{{imagem}}" class="img-thumbnail mb-4" style="max-width: 200px; max-height: 200px" />
-            {% else %}
-            <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-thumbnail mb-4"
-                style="max-width: 200px; max-height: 200px" />
-            {% endif %}
+        <!--Atributos: id, nome, classe, força, destreza, inteligência, idade, história, imagem-->
+        <div class="row">
+            <div class="col form-group container">
+                <label for="exampleFormControlSelect1">Ocupação:</label>
+                <select class="form-control" id="ocupacao" name="ocupacao" value="{{ ocupacao }}">
+                    <option></option>
+                    <option>Ciborgue</option>
+                    <option>Humano</option>
+                    <option>Robô</option>
+                </select>
+            </div>
+
+            <div class="col form-group container">
+                <label for="exampleFormControlSelect1">Habilidade única:</label>
+                <select class="form-control" id="habilidade" name="habilidade" value="{{ habilidade }}">
+                    <option></option>
+                    <option>Acrobacia urbana</option>
+                    <option>Atirador de elite</option>
+                    <option>Engenheiro de Drone</option>
+                    <option>Hacker</option>
+                    <option>Mestre em combate</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col form-group  container">
+
+                    <label for="história">História:</label>
+                    <input type="textarea" class="form-control" id="historia" name="historia" value="{{ historia }}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group  container">
+                    <label for="imagem">Imagem:</label>
+                </div>
+
+                <input type="text" class="form-group  mb-4" id="imagem" name="imagem" value="{{ imagem }}">
+            </div>
+
         </div>
-
+        {% if imagem %}
+</div>
+<div class="row">
+    <div class="col form-group  container">
+        <img src="{{imagem}}" class="img-thumbnail mb-4" style="max-width: 200px; max-height: 200px" />
+        {% else %}
+        <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-thumbnail mb-4"
+            style="max-width: 200px; max-height: 200px" />
+        {% endif %}
     </div>
-    <div class="container">
-        <input type="submit" class="btn btn-primary" name="salvar" value="Salvar">
-        <a href="{{url_for('home_admin')}}" class="btn btn-secondary">Cancelar</a>
-        <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">
-    </div>
+
+</div>
+<div class="container">
+    <input type="submit" class="btn btn-primary" name="salvar" value="Salvar">
+    <a href="{{url_for('home_admin')}}" class="btn btn-secondary">Cancelar</a>
+    <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">
+</div>
 
 
-    </div>
+</div>
 
 </form>
+</div>
 {% endblock %}

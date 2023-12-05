@@ -34,33 +34,51 @@ footer p,
 section {
     height: 80vh;
 }
-.form-group label, p{
-    color:whitesmoke
 
+.form-group label,
+p {
+    color: whitesmoke;
 }
 
 .table th,
 td {
     color: whitesmoke;
-    background-color: #0D8C75;
+    background-color: #532A8C;
     align-items: center;
+}
+table{
+    margin:10px;
+    border:3px solid  #532A8C;
+    border-radius: 20px;
 }
 
 .table th,
 td,
 tr {
     color: whitesmoke;
-    background-color: #0D8C75;
+    background-color: #532A8C;
     align-items: center;
 }
-.form-label{
-  color: whitesmoke; 
+
+.form-label {
+    color: whitesmoke;
 }
-  
-input, a{
+
+input,
+a {
     margin-bottom: 10px;
 }
 
 a {
     text-decoration: none;
 }
+
+.editar-admin{
+    background-color: #532A8C;
+    padding:10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
