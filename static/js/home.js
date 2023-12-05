@@ -10,7 +10,7 @@ function mudaHabilidadeAcrobata() {
     document.getElementById('habilidade-hacker').style.border = 'none';
     document.getElementById('habilidade-engenheiro').style.border = 'none';
 
-    document.getElementById("habilidade-acrobata").style.border = "2px solid white";
+    document.getElementById("habilidade-acrobata").style.border = "2px solid #0D8C75";
     document.getElementById("titulo-habilidade").innerHTML = "Acrobata urbano";
     document.getElementById("resumo-habilidade").innerHTML = "Habilidade exclusiva voltada para mobilidade e destreza. Suas capacidades incluem a criação de hologramas de distração, implantes cibernéticos que permitem saltos acrobáticos, garras magnéticas para escalada e deslizadores urbanos nas solas dos sapatos. ";
     document.getElementById("img-personagem-home").src = "/static/img/personagens/acrobata.jpg";
@@ -36,7 +36,7 @@ function mudaHabilidadeAtiradoraElite() {
     document.getElementById('habilidade-mestre').style.border = 'none';
     document.getElementById('habilidade-hacker').style.border = 'none';
     document.getElementById('habilidade-engenheiro').style.border = 'none';
-    document.getElementById("habilidade-atirador").style.border = "2px solid white";
+    document.getElementById("habilidade-atirador").style.border = "2px solid #0D8C75";
     document.getElementById("titulo-habilidade").innerHTML = "Atiradora de elite";
     document.getElementById("resumo-habilidade").innerHTML = "A Atiradora de Elite, em um cenário futurista, traz consigo habilidades únicas que a destacam no campo de batalha. Sua perícia excepcional com armas de longo alcance e habilidades táticas tornam-na uma força crucial para estratégias de equipe e confrontos à distância.";
     document.getElementById("img-personagem-home").src = "/static/img/personagens/atiradora-elite.jpg";
@@ -60,7 +60,7 @@ function mudaHabilidadeEngenheiraDrone() {
     document.getElementById('habilidade-mestre').style.border = 'none';
     document.getElementById('habilidade-hacker').style.border = 'none';
 
-    document.getElementById("habilidade-engenheiro").style.border = "2px solid white";
+    document.getElementById("habilidade-engenheiro").style.border = "2px solid #0D8C75";
     document.getElementById("titulo-habilidade").innerHTML = "Engenheira de drone";
     document.getElementById("resumo-habilidade").innerHTML = "A Engenheira de Drone é uma especialista técnica em um mundo futurista, cujas habilidades giram em torno do controle de drones avançados. Seu papel essencial no campo de batalha envolve a utilização estratégica de tecnologia para fornecer suporte, reconhecimento e controle tático à equipe.";
     document.getElementById("img-personagem-home").src = "/static/img/personagens/engenheira-drone.png";
@@ -89,7 +89,7 @@ function mudaHabilidadeHacker() {
     document.getElementById("verMais2").innerHTML = ""
     document.getElementById("verMais3").innerHTML = ""
 
-    document.getElementById("habilidade-hacker").style.border = "2px solid white";
+    document.getElementById("habilidade-hacker").style.border = "2px solid #0D8C75";
     document.getElementById("titulo-habilidade").innerHTML = "Hacker";
     document.getElementById("resumo-habilidade").innerHTML = "O Hacker, um especialista em manipulação digital no cenário futurista, destaca-se por três habilidades distintas que o tornam um ativo valioso para a equipe. Sua perícia em invasão cibernética, interferência eletrônica e manipulação de drones inimigos o posiciona como um estrategista tático incomparável. ";
     document.getElementById("img-personagem-home").src = "/static/img/personagens/hacker.jpg";
@@ -113,7 +113,7 @@ function mudaHabilidadeMestreCombate() {
     document.getElementById("verMais1").innerHTML = ""
     document.getElementById("verMais2").innerHTML = ""
     document.getElementById("verMais3").innerHTML = ""
-    document.getElementById("habilidade-mestre").style.border = "2px solid white";
+    document.getElementById("habilidade-mestre").style.border = "2px solid #0D8C75";
     document.getElementById("titulo-habilidade").innerHTML = "Mestre em combate";
     document.getElementById("resumo-habilidade").innerHTML = "A Mestre em Combate é uma guerreira habilidosa em um cenário futurista, destacando-se por suas proezas físicas e expertise em diversas formas de combate. Sua presença no campo de batalha é marcada por uma combinação única de força bruta, agilidade impressionante e táticas de combate estratégicas.";
     document.getElementById("img-personagem-home").src = "/static/img/personagens/mestra_combate.jpg";

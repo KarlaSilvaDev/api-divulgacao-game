@@ -5,10 +5,6 @@
     justify-content: space-around;
 
 }
-body{
-    background-color: #452559;
- 
-}
 
 section{
     padding: 1%;
@@ -17,30 +13,28 @@ section{
     max-height: 25%;
    
 }
-.ico-home{
-
-}
-
 
 .texto-home{
     width: 50%;
     margin: 5px;
-    border: 1px solid #E052F2;
+    border: 2px solid #0D8C75;
     padding: 10px;
     border-radius: 10px;
+    background-color:#452559;
     color:whitesmoke;
+  
    
    
 }
 .carousel-home{
    width: 50%;
-   
 
 }
 
 .img-home1 img{
     max-width:500px;
     border-radius: 100%;
+    border: 2px solid #0D8C75;
 
 
 }
@@ -57,7 +51,7 @@ section{
 button{
     margin:5px;
     color: #452559;
-    background-color: #452559
+    background-color:var(--verde);
    
    
    
@@ -67,4 +61,9 @@ h4{
 }
 #img-personagem-home{
     max-width: 500px;
+}
+
+.btn{
+    background-color:#0D8C75 ;
+    color:whitesmoke;
 }

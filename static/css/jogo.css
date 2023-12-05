@@ -4,10 +4,12 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body {
-    background-color: #452559;
-    color: #fff;
+.container {
+    max-width:100%;
+    margin:0;
+    
 }
+
 
 .titulo {
     color: #fff;
@@ -16,14 +18,18 @@ body {
 .video_square {
     font-family: "Press Start 2P", cursive;
     position: relative;
-    max-width: 1800px; /* ou o tamanho desejado */
-    margin: 20px auto;
+    margin:0;
+    margin-left: -20px;
+    width: 110%;
+    /* ou o tamanho desejado */
+
 }
 
 video {
     width: 100%;
     height: auto;
     display: block;
+   
 }
 
 .texto-sobre-video {
@@ -64,15 +70,18 @@ video {
     width: 100%;
     height: auto;
     border-radius: 12px;
+    border: 2px solid #0D8C75;
 }
 
 .texto-objetivo {
-    color: #fff;
+
     width: 50%;
     padding: 0 20px;
-    background-color: rgba(161, 161, 161, 0.233);
     border-radius: 12px;
     padding: 10px;
+    background-color: #452559;
+    color: whitesmoke;
+    border: 2px solid #0D8C75;
 }
 
 body.modo-noturno {
@@ -96,4 +105,9 @@ body.modo-noturno {
 
 .modo-noturno .objetivo {
     background-color: rgba(161, 161, 161, 0.233);
+}
+
+.btn {
+    background-color: #0D8C75;
+    color: whitesmoke;
 }

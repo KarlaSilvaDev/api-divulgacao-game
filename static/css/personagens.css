@@ -1,24 +1,27 @@
 .personagens {
     background-color: rgb(41, 41, 41);
     background-image: url('../img/personagens/background-personagens.jpg');
-
     background-size: cover;
 }
 
 .card {
-    box-shadow: 10px 10px 30px rgba(119, 8, 153, 0.7);
-    border: none;
-
+    border: 2px solid #0D8C75;
+    background-color: #452559;
+    color: whitesmoke;
+  
 }
 
 .card-header {
     font-family: 'Orbitron', sans-serif;
-    background-color: rgb(38, 5, 70);
+    color: whitesmoke;
+    background-color: #452559;
+    
+
 }
 
 .card-title {
     font-weight: 700;
-    text-shadow: 2px 2px 2px rgb(188, 109, 233);
+    color:whitesmoke;
 }
 
 .card-img-top {
@@ -29,10 +32,17 @@
 }
 
 .card-body {
-    background-color: lightgray
+    background-color: #452559;
 }
 
 .card-footer {
-    background-color: lightgray;
+    background-color: #452559;
     border: none;
+    color: whitesmoke;
 }
+
+.text-light{
+    color:whitesmoke;
+}
+
+
