@@ -140,6 +140,6 @@ python app.py
 
 ## :handshake: Contato
 
-Karla Silva - - karlasilvaeng@gmail.com
+Karla Silva - - nathalia_porcelli@hotmail.com
 
-Link do projeto: [https://github.com/KarlaSilvaEng/api-divulgacao-game/](https://github.com/KarlaSilvaEng/api-divulgacao-game/)
+Link do projeto: [https://github.com/nathaliaporcelli/api-divulgacao-game/](https://github.com/nathaliaporcelli/api-divulgacao-game/)
