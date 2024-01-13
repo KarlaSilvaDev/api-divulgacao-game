@@ -30,7 +30,7 @@ def tela_login():
     return render_template("login.html")
 
 
-@app.route("/cd")
+@app.route("/admin")
 def home_admin():
     lista_personagens = db_utils.retornar_personagens()
     return render_template(
