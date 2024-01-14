@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta >
+    <meta>
     <title>Design System</title>
 
 </head>
-<body>
-    <h1 class="zen-dots-regular"> Títulos da página </h1>
-    <h2 class="exo-2-sub-titulo">Subtítulo da página</h2>
-    <p class="fonte-texto ">Desvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e distopia se entrelaçam. Como Enigma, um renegado em busca da utopia, mergulhe na megalópole de Nexus Prime, onde a linha entre herói e vilão desaparece. Prepare-se para a revolução digital, onde cada decisão molda o destino da cidade. Neon Shadows não é apenas um jogo, é a chave para desvendar o enigma que redefine a realidade. Você está pronto para a jornada?</p>
-   
-   <div class="container">
-    <div class="cor1 texto-fundo-claro fonte-texto container-item  ">#FF2A6D</div>
-    <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
-    <div class="cor3 texto-fundo-claro fonte-texto ">#05D9E8</div>
-    <div class="cor4 texto-fundo-escuro fonte-texto ">#005678</div>
-    <div class="cor5 texto-fundo-escuro fonte-texto container-item "> #01012B</div>
-    <div class="cor1 texto-fundo-claro fonte-texto ">#FF2A6D</div>
-    <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
-    <div class="cor3 texto-fundo-claro fonte-texto ">#05D9E8</div>
-    <div class="cor4 texto-fundo-escuro fonte-texto ">#005678</div>
-    <div class="cor5 texto-fundo-escuro fonte-texto "> #01012B</div>
-    <div class="cor1 texto-fundo-claro fonte-texto ">#FF2A6D</div>
-    <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
-    <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
-    <div class="cor5 texto-fundo-escuro fonte-texto "> #01012B</div>
-    <div class="cor1 texto-fundo-claro fonte-texto ">#FF2A6D</div>
-    <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
-    <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
-   </div> 
+<main>
 
-   <div>
-    <button class="button ativo">Ativo</button>
-<button class="button inativo">Inativo</button>
-   </div>
-   
-</body>
+    <body>
+        <h1> Títulos da página </h1>
+        <h2 class="texto-fundo-escuro ">Subtítulo da página</h2>
+        <p class="fonte-texto texto-fundo-escuro  ">Desvende segredos e escolhas cruciais em Neon Shadows, onde a
+            realidade virtual e
+            distopia se entrelaçam. Como Enigma, um renegado em busca da utopia, mergulhe na megalópole de Nexus Prime,
+            onde a linha entre herói e vilão desaparece. Prepare-se para a revolução digital, onde cada decisão molda o
+            destino da cidade. Neon Shadows não é apenas um jogo, é a chave para desvendar o enigma que redefine a
+            realidade. Você está pronto para a jornada?</p>
+
+        <div class="container">
+            <div class="cor1 texto-fundo-claro fonte-texto container-item  ">#FF2A6D</div>
+            <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
+            <div class="cor3 texto-fundo-claro fonte-texto ">#05D9E8</div>
+            <div class="cor4 texto-fundo-escuro fonte-texto ">#005678</div>
+            <div class="cor5 texto-fundo-escuro fonte-texto container-item "> #01012B</div>
+            <div class="cor1 texto-fundo-claro fonte-texto ">#FF2A6D</div>
+            <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
+            <div class="cor3 texto-fundo-claro fonte-texto ">#05D9E8</div>
+            <div class="cor4 texto-fundo-escuro fonte-texto ">#005678</div>
+            <div class="cor5 texto-fundo-escuro fonte-texto "> #01012B</div>
+            <div class="cor1 texto-fundo-claro fonte-texto ">#FF2A6D</div>
+            <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
+            <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
+            <div class="cor5 texto-fundo-escuro fonte-texto "> #01012B</div>
+            <div class="cor1 texto-fundo-claro fonte-texto ">#FF2A6D</div>
+            <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
+            <div class="cor2 texto-fundo-claro fonte-texto ">#D1F7FF</div>
+        </div>
+
+        <div>
+            <button class="button btn-ativo">Ativo</button>
+            <button class="button btn-inativo">Inativo</button>
+        </div>
+        <div>
+            <a><img class="img-habilidades" id="habilidade-acrobata" src="/static/img/home/acrobata_urbano.jpg"
+                    title="Acrobata Urbano" onclick="mudaHabilidadeAcrobata()"></a>
+
+        </div>
+        <div class="card-main">
+            <div class="card">
+                <h1 class="card-title">Nome do personagem</h1>
+                <h2 class="card-subtitle">Tipo</h2>
+                <img class="img-card" alt="imagem personagem" src="/static/img/personagens/atiradora-elite.jpg">
+                <p class="card-text">Desvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e
+                    distopia se entrelaçam. Como Enigma, um renegado em busca da utopia, mergulhe na megalópole de Nexus
+                    Prime, onde a linha entre herói e vilão desaparece. P</p>
+                <button class="button  card-btn-ativo  texto-fundo-escuro">Ver Mais</button>
+            </div>
+            <div class="card">
+                <h1 class="card-title">Nome do personagem</h1>
+                <h2 class="card-subtitle">Tipo</h2>
+                <img class="img-card" alt="imagem personagem" src="/static/img/personagens/atiradora-elite.jpg">
+                <p class="card-text">Desvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e
+                    distopia se entrelaçam. Como Enigma, um renegado em busca da utopia, mergulhe na megalópole de Nexus
+                    Prime, onde a linha entre herói e vilão desaparece. P</p>
+                <button class="button  card-btn-ativo  texto-fundo-escuro">Ver Mais</button>
+            </div>
+            <div class="card">
+                <h1 class="card-title">Nome do personagem</h1>
+                <h2 class="card-subtitle">Tipo</h2>
+                <img class="img-card" alt="imagem personagem" src="/static/img/personagens/atiradora-elite.jpg">
+                <p class="card-text">Desvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e
+                    distopia se entrelaçam. Como Enigma, um renegado em busca da utopia, mergulhe na megalópole de Nexus
+                    Prime, onde a linha entre herói e vilão desaparece. P</p>
+                <button class="button  card-btn-ativo  texto-fundo-escuro">Ver Mais</button>
+            </div>
+        </div>
+
+
+
+    </body>
+</main>
+
 </html>
