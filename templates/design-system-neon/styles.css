@@ -15,6 +15,20 @@ body {
     background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
     margin-top: 4%;
 }
+.video-square {
+    font-family: "Press Start 2P", cursive;
+    position: relative;
+    margin:0;
+    
+    /* ou o tamanho desejado */
+
+}
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+   
+}
 
 .neon-shadows {
     color: #FF2A6D;
