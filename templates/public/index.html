@@ -1,71 +1,52 @@
-{% extends 'base-public.html'%}
+{% extends 'base-public.html' %}
 
 {% block styles %}
-
+    <!-- Adicione seus estilos personalizados aqui, se necessário -->
 {% endblock %}
+
 {% block public_content %}
-
-<section>
-
-    <div class="banner-container">
-        <img class="banner-image" src="/static/img/home/carrossel2.jpg" alt="Imagem 1">
-        <div class="banner-text" id="typing-text"></div>
-    </div>
-
-</section>
-
-
-<section>
-    <div class="txt-img">
-        <h2 class="txt-bg-dark txt">
-            Em 2178, na distópica Nexus Prime, Enigma, um renegado ex-agente, guarda o último fragmento de um código
-            proibido que pode reescrever a realidade virtual. Envolvido por corporações e facções rebeldes, ele busca a
-            Ascensão, uma utopia virtual. Em Neon Shadows, a megalópole é um labirinto de ameaças e alianças, onde
-            Enigma enfrenta escolhas cruciais. Neste caos digital, a linha entre herói e vilão desaparece, revelando
-            segredos sombrios e traições. Prepare-se para uma jornada eletrizante em busca da verdade, enquanto Enigma
-            decide o destino de Nexus Prime e desvenda mistérios ocultos. A revolução está à espreita, e a chave está em
-            desvendar o enigma.
-        </h2>
-        <div>
-            <img src="/static/img/personagens/hacker.jpg" class="img-character img">
+    <section>
+        <div class="banner-container">
+            <img class="banner-image" src="/static/img/home/carrossel1.jpg" alt="Imagem 1">
+            <div class="banner-text" id="typing-text-home"></div>
         </div>
+    </section>
 
-    </div>
+    <section>
+        <div class="txt-img">
+            <h2 class="txt-bg-dark txt">
+                Em 2178, na distópica Nexus Prime, Enigma, um renegado ex-agente, guarda o último fragmento de um código
+                proibido que pode reescrever a realidade virtual. Envolvido por corporações e facções rebeldes, ele
+                busca a Ascensão, uma utopia virtual. Em Neon Shadows, a megalópole é um labirinto de ameaças e alianças,
+                onde Enigma enfrenta escolhas cruciais. Neste caos digital, a linha entre herói e vilão desaparece,
+                revelando segredos sombrios e traições. Prepare-se para uma jornada eletrizante em busca da verdade,
+                enquanto Enigma decide o destino de Nexus Prime e desvenda mistérios ocultos. A revolução está à espreita,
+                e a chave está em desvendar o enigma.
+            </h2>
+            <div>
+                <img src="/static/img/personagens/hacker.jpg" class="img-character img">
+            </div>
+        </div>
+    </section>
 
-
-
-</section>
-
-<div class="ability">
-    <div class="div-ability">
-       <img class="img-ability" id="ability-acrobata" src="/static/img/home/acrobata_urbano.jpg"
+    <div class="ability">
+        <div class="div-ability">
+            <img class="img-ability" id="ability-acrobata" src="/static/img/home/acrobata_urbano.jpg"
                 title="Acrobata Urbano" onclick="changeAbilityAcrobata()">
-        <img class="img-ability" id="ability-sniper" src="/static/img/home/atirador_elite.jpg"
-            onclick="changeAbilitySniper()" title="Atirador elite">
-        <img class="img-ability" id="ability-engineer" src="/static/img/home/engenheiro_drone.jpg"
-            onclick="changeAbilityEngineer()" title="Engenheira de Drone" class="">
-        <img class="img-ability" id="ability-hacker" src="/static/img/home/hacker.jpg" onclick="changeAbilityHacker()"
-            title="Hacker">
-        <img class="img-ability" id="ability-master" src="/static/img/home/mestra_combate.jpg"
-            onclick="changeAbilityMaster()" title="Mestre em combate" class="">
+            <img class="img-ability" id="ability-sniper" src="/static/img/home/atirador_elite.jpg"
+                onclick="changeAbilitySniper()" title="Atirador elite">
+            <img class="img-ability" id="ability-engineer" src="/static/img/home/engenheiro_drone.jpg"
+                onclick="changeAbilityEngineer()" title="Engenheira de Drone" class="">
+            <img class="img-ability" id="ability-hacker" src="/static/img/home/hacker.jpg"
+                onclick="changeAbilityHacker()" title="Hacker">
+            <img class="img-ability" id="ability-master" src="/static/img/home/mestra_combate.jpg"
+                onclick="changeAbilityMaster()" title="Mestre em combate" class="">
+        </div>
     </div>
 
-
-</div>
-<div class="txt-ability">
-
-    <h1 id="title-ability">Habilidade exclusiva</h4>
-        <h2 class="txt-bg-dark" id="summary-ability ">Em um universo repleto de desafios, cada personagem no jogo
-            traz consigo uma
-            ability única, fundamental para estratégia e jogabilidade. Essas abilitys não apenas enriquecem a
-            narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em
-            diferentes situações. A escolha do personagem não é apenas estética, mas estratégica, permitindo aos
-            jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As abilitys únicas não só
-            diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma
-            jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça
-            do jogo, e suas abilitys únicas desempenham um papel crucial na exploração, estratégia e sucesso
-            global.
-
+    <div class="txt-ability">
+        <h1 id="title-ability">Habilidade exclusiva</h1>
+        <h2 class="txt-bg-dark" id="summary-ability ">Em um universo repleto de desafios, cada personagem no jogo traz consigo uma ability única, fundamental para estratégia e jogabilidade. Essas abilitys não apenas enriquecem a narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em diferentes situações. A escolha do personagem não é apenas estética, mas estratégica, permitindo aos jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As abilitys únicas não só diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça do jogo, e suas abilitys únicas desempenham um papel crucial na exploração, estratégia e sucesso global.
         </h2>
         <p id="verMais1"></p>
         <p id="verMais2"></p>
@@ -75,20 +56,21 @@
             <button id="verMais" type="button" class="btn" onclick="verMais()">Ver mais</button>
         </div>
         <div>
-            <button id="verMenos" type="button" class="btn" display=none onclick="verMenos()">Ver
-                menos</button>
+            <button id="verMenos" type="button" class="btn" display=none onclick="verMenos()">Ver menos</button>
         </div>
+    </div>
 
-</div>
-<div id="foto-personagem-ability" class="d-flex justify-content-center img-home1">
-    <img id="img-personagem-home" src="">
-</div>
-</section>
-<div class="d-flex flex-row-reverse p-2">
-    <a href="{{ url_for('jogo') }}" class="btn">Conheça o jogo</a>
-</div>
-<script src="../../static/js/jogo.js"></script>
-<script src="/static/js/home.js"></script>
+    <div id="foto-personagem-ability" class="d-flex justify-content-center img-home1">
+        <img id="img-personagem-home" src="">
+    </div>
+
+    <!-- Seção do carrossel de imagens -->
 
 
+    <!-- Adicione seus scripts JS no final para garantir que o DOM esteja carregado -->
+ 
+    <script src="/static/js/home.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+
+    
 {% endblock %}

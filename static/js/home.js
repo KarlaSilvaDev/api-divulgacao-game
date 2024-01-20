@@ -178,45 +178,36 @@ function verMenos() {
     document.getElementById("verMenos").style.display = "none";
 }
 
-// Lista de imagens
 const imagens = [
     "/static/img/home/carrossel2.jpg",
     "/static/img/home/carrossel3.jpg",
     "/static/img/home/carrossel4.jpg"
 ];
 
-// Elemento de imagem
 const imagemElement = document.querySelector('.banner-image');
-
-// Variável para controlar o índice da imagem atual
 let indiceAtual = 0;
 
-// Função para alterar a imagem
 function alterarImagem() {
-    imagemElement.style.opacity = 0; // Define a opacidade para 0
+    // Remova a linha abaixo
+    // imagemElement.style.opacity = 0;
 
+    // Remova o setTimeout, pois queremos que a transição ocorra automaticamente com o tempo definido no CSS
+    imagemElement.src = imagens[indiceAtual];
+    indiceAtual = (indiceAtual + 1) % imagens.length;
+
+    // Adicione um pequeno atraso antes de ajustar a opacidade para garantir que a transição ocorra após a imagem ser carregada
     setTimeout(() => {
-        // Altera a imagem e incrementa o índice
-        imagemElement.src = imagens[indiceAtual];
-        indiceAtual = (indiceAtual + 1) % imagens.length;
-
-        // Define a opacidade de volta para 1 após um breve atraso
-        setTimeout(() => {
-            imagemElement.style.opacity = 1;
-        }, 100);
-    }, 100); // Ajuste conforme necessário para atraso entre as imagens
+        imagemElement.style.opacity = 1;
+    }, 50);
 }
 
-// Chama a função inicialmente
 alterarImagem();
-
-// Chama a função periodicamente para alterar as imagens
-setInterval(alterarImagem, 5000); // Ajuste conforme necessário para o intervalo entre as imagens
-
-const textoCompleto = "\nDesvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e distopia se entrelaçam.Você está pronto para esta jornada?";
-const textoElement = document.getElementById('typing-text');
+setInterval(alterarImagem, 5000);
+const textoCompleto = "\nDesvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e distopia se entrelaçam. Você está pronto para esta jornada?";
+const textoElement = document.getElementById('typing-text-home');
 let indice = 0;
 
+// Função para exibir texto com efeito de digitação
 function exibirTexto() {
     textoElement.textContent += textoCompleto[indice];
     indice++;
@@ -225,5 +216,13 @@ function exibirTexto() {
     }
 }
 
-// Chama a função inicialmente
+// Chama a função de exibição de texto inicialmente
 exibirTexto();
+
+// Autoplay do vídeo História
+var video = document.getElementById("videoHome");
+
+// Reproduzir o vídeo quando a página é carregada
+window.onload = function () {
+    video.play();
+};

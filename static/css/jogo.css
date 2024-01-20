@@ -1,113 +1,61 @@
-* {
-    padding: 0;
-    margin: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+/* Conteúdo do jogo.css */
+/* Adicione regras específicas para jogo.html aqui */
 
-.container {
-    max-width:100%;
-    margin:0;
-    
-}
-
-
-.titulo {
-    color: #fff;
-}
-
-.video_square {
-    font-family: "Press Start 2P", cursive;
+.banner-container {
     position: relative;
-    margin:0;
-    margin-left: -20px;
-    width: 110%;
-    /* ou o tamanho desejado */
-
-}
-
-video {
     width: 100%;
-    height: auto;
-    display: block;
-   
+    height: 300px;
+    margin-top: -10px;
+    overflow: hidden;
 }
 
-.texto-sobre-video {
+#video-jogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
-    top: 50%;
+    top: 0;
+    left: 0;
+}
+
+.video-text {
+    position: absolute;
+    top: 20%;
+    /* Ajuste conforme necessário para posicionar verticalmente no meio */
     left: 50%;
+    /* Ajuste conforme necessário para posicionar horizontalmente no meio */
     transform: translate(-50%, -50%);
+    /* Cor do texto */
     text-align: center;
-    color: #fff;
-    background-color: #3333339c;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 70%;
+    /* Alinhamento do texto */
+    /* white-space: nowrap; Evita quebras de linha */
+    overflow: hidden;
+    /* Oculta o conteúdo que ultrapassa o contêiner */
+    border-right: 2px solid;
+    /* Adiciona um cursor simulado */
+    padding-right: 5px;
+    /* Espaçamento para o cursor simulado */
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #05D9E8;
+    max-width: 100%;
+    background-color: rgba(1, 1, 43, 0.5); /* Cor do plano de fundo com 50% de opacidade */
+    opacity: 90%;
+    padding:0;
+    font-size: 24px;
+    
+
 }
 
-.texto-sobre-video h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.texto-sobre-video p {
-    font-size: 1.2em;
-    margin: 0;
-}
-
-.objetivo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px;
-}
-
-.imagem-objetivo {
-    width: 25em;
-}
-
-.imagem-objetivo img {
-    width: 100%;
+.img-bg-jogo {
     height: auto;
-    border-radius: 12px;
-    border: 2px solid #0D8C75;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: -30px;
+
 }
 
-.texto-objetivo {
-
-    width: 50%;
-    padding: 0 20px;
-    border-radius: 12px;
-    padding: 10px;
-    background-color: #452559;
-    color: whitesmoke;
-    border: 2px solid #0D8C75;
-}
-
-body.modo-noturno {
-    background-color: #111;
-    color: #ddd;
-}
-
-.modo-noturno .titulo,
-.modo-noturno .texto-sobre-video,
-.modo-noturno .texto-objetivo {
-    color: #ddd;
-}
-
-.modo-noturno .video_square {
-    border: 2px solid #ddd;
-}
-
-.modo-noturno .video_square .texto-sobre-video {
-    background-color: #3333339c;
-}
-
-.modo-noturno .objetivo {
-    background-color: rgba(161, 161, 161, 0.233);
-}
-
-.btn {
-    background-color: #0D8C75;
-    color: whitesmoke;
-}
+/* Adicione outras regras específicas para jogo.html aqui */

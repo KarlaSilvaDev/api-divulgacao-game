@@ -1,46 +1,40 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    justify-content: space-around;
+/* Conteúdo do historia.css */
+/* Adicione regras específicas para historia.html aqui */
 
-}
-
-p {
-	color: aliceblue;
-	font-family: 'Roboto', sans-serif;
-
-}
-
-h1 {
-	font-family: 'Russo One', sans-serif;
-	color:aliceblue;
-	text-align: center;
-	padding: 60px;
-}
-
-.container{
-	width: 1280px;
-	padding: 20px 0;
-	margin: 0 auto;
-	display: flex;
-
-}
-
-.bloco{
-	box-sizing: border-box;
-	padding: 12px;
-	width: 50%;
-	float: left;
-	border-radius: 5px;
-	background-color: #452559;
-	border: 1px solid #E052F2;
-
-}
-
-.imagem img {
+.videoHistoria {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-	border: 1px solid #E052F2;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: -30px;
 }
+
+.txt-img {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    padding: 2%;
+    justify-content: space-around;
+}
+
+.txt {
+    display: flex;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.img {
+    display: flex;
+    max-width: 50%;
+}
+
+.img-place {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    border: #05D9E8 solid 3px;
+    padding: 0;
+}
+
+/* Adicione outras regras específicas para historia.html aqui */
