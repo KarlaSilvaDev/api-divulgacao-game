@@ -23,3 +23,11 @@ body {
     z-index: 1; 
     margin-top:-30px;
 }
+footer {
+    background-color: #01012B;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 0%;
+}

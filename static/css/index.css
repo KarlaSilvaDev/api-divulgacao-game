@@ -1,4 +1,8 @@
 /* Header */
+body {
+    background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
+    margin-top: 4%;
+}
 header {
     background-color: #01012B;
     display: block;
@@ -63,10 +67,12 @@ h2 {
 .txt-ability {
     max-width: 100%;
     display: block;
+    border-radius: 20px;
     border: #05D9E8 solid 3px;
     box-sizing: border-box;
     justify-content: space-around;
     margin: 2%;
+    padding:20px;
 }
 
 .div-ability {
