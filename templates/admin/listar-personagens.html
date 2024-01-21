@@ -3,11 +3,10 @@
 
 {% block content %}
 <link rel="stylesheet" href="/static/css/listar-personagem-adm.css">
-<h1>Edição de Personagens</h1>
 <div class="btn-add">
-   
-    <td> <a href="{{ url_for('editar_personagem', id = 0)}}" class="btn-add btn-active">Adicionar Personagem</a></td>
+  <div class="btn btn-active "><a href="{{ url_for('editar_personagem', id = 0)}}">Adicionar Personagem</a></div>  
 </div>
+
 
 <div>
     <table id="character">
@@ -46,7 +45,7 @@
                     <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-table" />
                     {% endif %}
                 </td>
-                <td> <a href="{{ url_for('editar_personagem', id = id)}}" class="btn-form btn-active">Editar</a></td>
+                <td> <a href="{{ url_for('editar_personagem', id = id)}}" class="btn btn-active">Editar</a></td>
 
             </tr>
             {% endfor %}

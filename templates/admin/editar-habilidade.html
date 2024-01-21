@@ -1,36 +1,34 @@
 <!--ADMIN: página que irá permitir o cadastro e edição do personagem-->
 {% extends 'base-admin.html' %}
 {% block content %}
-<div class="align-h1-center">
-    <h1>Editar Habilidade</h1>
-</div>
-
-<div class="form-main">
+<div class="editar-admin">
     <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
-        <link rel="stylesheet" href="/static/css/habilidades.css">
-        
- 
 
-            <div class="form-items">
+        <div class="row">
+
+            <div class="form-group container col">
                 <label for="id">ID:</label>
                 <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
                 <div class="invalid-feedback">Campo obrigatório.</div>
-
+            </div>
+            <div class="form-group container col">
                 <label for="nome">Nome:</label>
                 <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
                 <div class="invalid-feedback">Campo obrigatório.</div>
-
+            </div>
+            <div class="form-group container col">
                 <label for="ocupacao">Descrição:</label>
                 <input type="text" class="form-control" id="descricao" name="descricao" value="{{ descricao }}"
                     required>
                 <div class="invalid-feedback">Campo obrigatório.</div>
-   
+            </div>
+            <div class="container ">
                 <input type="submit" class="btn btn-primary" name="salvar" value="Salvar">
                 <a href="{{url_for('home_habilidade_admin')}}" class="btn btn-secondary">Cancelar</a>
                 <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">
             </div>
 
-       
+        </div>
 
 
 
