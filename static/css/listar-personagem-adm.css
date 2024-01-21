@@ -178,24 +178,47 @@ table {
     max-width: 50%;
 }
 
-.btn-add{
-    display: block;
+.btn-can{
     text-align: center;
+    display: block;
+    margin-left: 40%;
+    max-width:100% ;
+}
+.btn-add{
+    text-align: center;
+    display: block;
+    max-width: 20%;
+    margin-left: 40%;
+}
+.btn-add a{
+    background-color: #05D9E8;
+    font-family: "Public Sans", sans-serif;
+    color: #01012B;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    margin: 15px;
+    max-width:200px;
+    font-weight: bold;
+
 }
 
 .btn-active {
+    font-family: "Public Sans", sans-serif;
     background-color: #05D9E8;
     color: #01012B;
     border-radius: 20px;
     border: 10px;
     padding: 10px;
-    font-weight: bold;
     margin: 15px;
-    min-width: 70px;
+    min-width: 30%;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .btn-disabled {
     background-color: #05D9E8;
+    font-family: "Public Sans", sans-serif;
     color: #01012B;
     border-radius: 20px;
     border: 10px;
@@ -203,13 +226,14 @@ table {
     font-weight: bold;
     margin: 15px;
     opacity: 60%;
-    width: 70px;
+    max-width:200px;
+    
 }
 
 label,
 .invalid-feedback,
 option {
-    color: #01012B;
+    color: #D1F7FF;
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -217,16 +241,21 @@ option {
     padding: 20px;
     margin-bottom: 10px;
 }
+.btn-form{
+    justify-content: space-evenly;
+    display: flex;
+}
 
 .form-main {
-    max-width: 40%;
-    margin-left: 30%;
+    width: 50%;
+    margin-left: 25%;
     justify-content: space-around;
     display: block;
     text-align: left;
     border-radius: 10px;
     border: #05D9E8 solid 3px;
     padding: 20px;
+    margin-bottom: 2%;
 }
 
 
@@ -271,6 +300,7 @@ select {
     text-align: justify;
     padding: 20px;
     margin-bottom: 10px;
+    border: solid 2px #01012B;
     color: #01012B;
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
