@@ -132,10 +132,9 @@ body {
 table {
     background-color: #005678;
     text-align: center;
-    max-width: 90%;
+    max-width: 100%;
     margin: 20px;
     padding-top: 0px;
-    margin-left: 5%;
 }
 
 #character {
@@ -187,25 +186,34 @@ table {
 }
 .btn-add{
     text-align: center;
+    display: block;
+    max-width: 20%;
+    margin-left: 40%;
 }
 .btn-add a{
-    background-color: #05D9E8;
-    font-family: "Public Sans", sans-serif;
-    color: #01012B;
-    text-align: center;
-    display:inline-block;
-}
-
-.btn-active {
     background-color: #05D9E8;
     font-family: "Public Sans", sans-serif;
     color: #01012B;
     border-radius: 20px;
     border: 10px;
     padding: 10px;
-    font-weight: bold;
     margin: 15px;
     max-width:200px;
+    font-weight: bold;
+
+}
+
+.btn-active {
+    font-family: "Public Sans", sans-serif;
+    background-color: #05D9E8;
+    color: #01012B;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    margin: 15px;
+    min-width: 30%;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .btn-disabled {
@@ -236,10 +244,6 @@ option {
 .btn-form{
     justify-content: space-evenly;
     display: flex;
-    max-height: 100%;
-}
-.align-h1-center{
-    text-align: center;
 }
 
 .form-main {

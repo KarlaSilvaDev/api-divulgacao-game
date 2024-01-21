@@ -26,9 +26,11 @@
             </div>
             <div class="completo-texto" id="completo-{{ loop.index }}" style="display: none;">
                 <!-- Texto completo aqui -->
-                <p>{{ historia }}</p>
+                <p class="paragrafo">{{ historia }}</p>
+              
             </div>
             <button class="card-btn-active button-ver-mais" onclick="toggleTexto({{ loop.index }})">Ver Mais</button>
+          
         
         </div>
 
