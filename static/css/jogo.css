@@ -1,113 +1,43 @@
-* {
-    padding: 0;
-    margin: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #FF2A6D;
+    text-shadow: 2px;
+    max-width: 100%;
+    z-index: 2;
+    font-size: 36px;
+    text-align: center;
+
 }
 
-.container {
-    max-width:100%;
-    margin:0;
-    
-}
-
-
-.titulo {
-    color: #fff;
-}
-
-.video_square {
-    font-family: "Press Start 2P", cursive;
+.banner-container {
     position: relative;
-    margin:0;
-    margin-left: -20px;
-    width: 110%;
-    /* ou o tamanho desejado */
-
+    height: 100vh;
+    overflow: hidden;
 }
 
-video {
-    width: 100%;
-    height: auto;
-    display: block;
-   
+.img-bg-jogo {
+    background-image: url("/static/img/jogo/imagem7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+    /*opacity: 0.5;  Ajuste a opacidade conforme necessário */
 }
 
-.texto-sobre-video {
+.text-container {
     position: absolute;
-    top: 50%;
+    max-width: 100%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    background-color: #3333339c;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 70%;
-}
-
-.texto-sobre-video h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.texto-sobre-video p {
-    font-size: 1.2em;
-    margin: 0;
-}
-
-.objetivo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px;
-}
-
-.imagem-objetivo {
-    width: 25em;
-}
-
-.imagem-objetivo img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    border: 2px solid #0D8C75;
-}
-
-.texto-objetivo {
-
-    width: 50%;
-    padding: 0 20px;
-    border-radius: 12px;
-    padding: 10px;
-    background-color: #452559;
-    color: whitesmoke;
-    border: 2px solid #0D8C75;
-}
-
-body.modo-noturno {
-    background-color: #111;
-    color: #ddd;
-}
-
-.modo-noturno .titulo,
-.modo-noturno .texto-sobre-video,
-.modo-noturno .texto-objetivo {
-    color: #ddd;
-}
-
-.modo-noturno .video_square {
-    border: 2px solid #ddd;
-}
-
-.modo-noturno .video_square .texto-sobre-video {
-    background-color: #3333339c;
-}
-
-.modo-noturno .objetivo {
-    background-color: rgba(161, 161, 161, 0.233);
-}
-
-.btn {
-    background-color: #0D8C75;
-    color: whitesmoke;
+    /*white-space: nowrap;  Evita quebras de linha */
+    overflow: hidden;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(1, 1, 43, 0.5);
+    color:#D1F7FF;
+    font-size: 24px;
 }

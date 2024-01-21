@@ -1,9 +1,15 @@
 <!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
 {% extends 'base-admin.html' %}
 {% block content %}
+<link rel="stylesheet" href="/static/css/habilidades.css">
+
+<h1>Edição de Habilidade</h1>
+<div class="btn-add">
+    <td> <a href="{{ url_for('editar_habilidade', id = 0)}}" class="btn-add btn-active">Adicionar Habilidade</a></td>
+</div>
 
 <div>
-    <table class="table">
+    <table class="table" id="ability">
         <thead>
             <tr>
                 <th>ID</th>
@@ -18,7 +24,7 @@
                 <td>{{ id }}</td>
                 <td><strong>{{ nome }}</strong></td>
                 <td>{{ descricao }}</td>
-                <td><a class="btn btn-light" href="{{ url_for('editar_habilidade', id = id)}}">Editar</a></td>
+                <td><a class="btn-active btn-form" href="{{ url_for('editar_habilidade', id = id)}}">Editar</a></td>
             </tr>
             {% endfor %}
         </tbody>

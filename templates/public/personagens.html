@@ -1,4 +1,3 @@
-<!--PUBLIC: Página que irá listar os personagens- APENAS LEITURA -->
 {% extends 'base-public.html' %}
 
 {% block styles %}
@@ -6,48 +5,38 @@
 {% endblock %}
 
 {% block public_content %}
-<div class="album py-5">
-    <div class="container">
-        <div class="row">
-            {% for id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
-                {% set historia_resumida = "historia" if historia|length < 100 else historia[:100] ~ '...' %}
-                <div class="col-md-4">
-                    <div class="card mb-5">
-                        <div class="card-header text-light">
-                            <h4 class="card-title">{{ nome }}</h4>
-                            <p class="card-subtitle">{{ classe }}</p>
-                        </div>
-                        <img class="card-img-top" alt="Thumbnail [100%x225]" src="{{ imagem }}">
-                        <div class="card-body">
-                            <p class="card-text">{{ historia_resumida }}</p>
-                        </div>
-                        <div class="card-footer d-flex justify-content-end">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ loop.index }}">
-                                Ver mais
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<link rel="stylesheet" href="/static/css/personagens.css">
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal{{ loop.index }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">{{ nome }}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                {{ historia }}
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+
+<h1>Conheça os Personagens</h1>
+<div class="card-main">
+    {% for id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
+        {% set historia_resumida = "historia" if historia|length < 100 else historia[:100] ~ '...' %}
+        <div id="card-{{ loop.index }}" class="card{% if not classe %} no-subtitle{% endif %}">
+            <div class="card-header">
+                <h1 class="card-title">{{ nome }}</h1>
+                {% if classe %}
+                    <h2 class="card-subtitle">{{ classe }}</h2>
+                {% endif %}
+            </div>
+            <img class="img-card" alt="imagem character" src="{{ imagem }}">
+            <div class="resumo-texto" id="resumo-{{ loop.index }}">
+                <!-- Texto resumido aqui -->
+                <p>{{ historia_resumida }}</p>
+            </div>
+            <div class="completo-texto" id="completo-{{ loop.index }}" style="display: none;">
+                <!-- Texto completo aqui -->
+                <p>{{ historia }}</p>
+            </div>
+            <button class="card-btn-active button-ver-mais" onclick="toggleTexto({{ loop.index }})">Ver Mais</button>
+        
         </div>
-    </div>
+
+    {% endfor %}
 </div>
+
+
+
+<script src="../../static/js/personagens.js"></script>
+
 {% endblock %}

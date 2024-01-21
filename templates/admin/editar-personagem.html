@@ -1,104 +1,88 @@
 <!--ADMIN: página que irá permitir o cadastro e edição do personagem-->
 {% extends 'base-admin.html' %}
 {% block content %}
-<div class="editar-admin">
-    <form method="POST" enctype="multipart/form-data" action="" class="needs-validation " data-toggle="validator">
+<link rel="stylesheet" href="/static/css/listar-personagem-adm.css">
+<div class="align-h1-center">
+    <h1>Editar Personagem</h1>
+</div>
 
-        <div class="row">
-            <div class=" col form-group container">
-                <label for="id">ID:</label>
-                <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
-            </div>
-            <div class=" col form-group container">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
-            </div>
-            <div class="col form-group container"> <label for="idade">Idade:</label>
-                <input type="number" class="form-control" id="idade" name="idade" value="{{ idade }}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
-            </div>
+<div class="form-main">
+    <div class="form-items">
+        <label for="imagem">Imagem:</label>
 
+        <input type="text" id="imagem" name="imagem" value="{{ imagem }}">
+        {% if imagem %}
 
+        <img src="{{imagem}}" class="img-table">
+        {% else %}
+        <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-table">
 
-        </div>
-        <div class="row">
-            <div class="col form-group container">
+        {% endif %}
+    </div>
+
+    <div class="form-items">
+        <form method="POST" enctype="multipart/form-data" action="" class="needs-validation " data-toggle="validator">
+            <div>
+                <div class="id-age-flex">
+                    <div class="id-age">
+                        <label for="id">ID:</label>
+                        <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
+                        <!-- <div class="invalid-feedback">Campo obrigatório.</div> -->
+                    </div>
+                    <div class="id-age"> <label for="idade">Idade:</label>
+                        <input type="number" class="form-control" id="idade" name="idade" value="{{ idade }}" required>
+                        <!-- <div class="invalid-feedback">Campo obrigatório.</div> -->
+                    </div>
+
+                </div>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
+                    <!-- <div class="invalid-feedback">Campo obrigatório.</div> -->
+                </div>
+
                 <label for="forca" class="form-label">Força:</label>
-                <input type="range" class="form-range" min="0" max="10" id="forca" name="forca" value="{{ forca }}"
+                <input type="number" class="range" min="0" max="10" id="forca" name="forca" value="{{ forca }}"
                     required>
-            </div>
-            <div class="col form-group container"><label for="destreza" class="form-label">Destreza:</label>
-                <input type="range" class="form-range " min="0" max="10" class="form-control" id="destreza"
-                    name="destreza" value="{{ destreza }}" required>
-            </div>
-            <div class="col form-group container"><label for="inteligencia" class="form-label">Inteligência:</label>
-                <input type="range" class="form-range" min="0" max="10" id="inteligencia" name="inteligencia"
-                    value="{{ inteligencia }}" required>
-            </div>
-        </div>
 
-        <!--Atributos: id, nome, classe, força, destreza, inteligência, idade, história, imagem-->
-        <div class="row">
-            <div class="col form-group container">
+                <div class="col form-group container"><label for="destreza" class="form-label">Destreza:</label>
+                    <input type="number" class="form-range " min="0" max="10" class="form-control" id="destreza"
+                        name="destreza" value="{{ destreza }}" required>
+                </div>
+                <div class="col form-group container"><label for="inteligencia" class="form-label">Inteligência:</label>
+                    <input type="number" class="form-range" min="0" max="10" id="inteligencia" name="inteligencia"
+                        value="{{ inteligencia }}" required>
+                </div>
                 <label for="exampleFormControlSelect1">Ocupação:</label>
                 <select class="form-control" id="ocupacao" name="ocupacao" value="{{ ocupacao }}">
-                    <option></option>
+
                     <option>Ciborgue</option>
                     <option>Humano</option>
                     <option>Robô</option>
                 </select>
-            </div>
 
-            <div class="col form-group container">
                 <label for="exampleFormControlSelect1">Habilidade única:</label>
                 <select class="form-control" id="habilidade" name="habilidade" value="{{ habilidade }}">
-                    <option></option>
+
                     <option>Acrobacia urbana</option>
                     <option>Atirador de elite</option>
                     <option>Engenheiro de Drone</option>
                     <option>Hacker</option>
                     <option>Mestre em combate</option>
                 </select>
-            </div>
-            <div class="row">
-                <div class="col form-group  container">
 
-                    <label for="história">História:</label>
-                    <input type="textarea" class="form-control" id="historia" name="historia" value="{{ historia }}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col form-group  container">
-                    <label for="imagem">Imagem:</label>
+                <label for="história">História:</label>
+                <textarea class="textarea" id="historia" name="historia">{{ historia }}</textarea>
+                <div class="btn-form ">
+                    <input type="submit" class=" btn-active" name="salvar" value="Salvar">
+                    <a href="{{url_for('home_admin')}}" class="btn-can btn-active">Cancelar</a>
+                    <input type="submit" class="btn-active" name="excluir" value="Excluir">
                 </div>
 
-                <input type="text" class="form-group  mb-4" id="imagem" name="imagem" value="{{ imagem }}">
             </div>
 
-        </div>
-        {% if imagem %}
-</div>
-<div class="row">
-    <div class="col form-group  container">
-        <img src="{{imagem}}" class="img-thumbnail mb-4" style="max-width: 200px; max-height: 200px" />
-        {% else %}
-        <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-thumbnail mb-4"
-            style="max-width: 200px; max-height: 200px" />
-        {% endif %}
     </div>
+    <!--Atributos: id, nome, classe, força, destreza, inteligência, idade, história, imagem-->
 
-</div>
-<div class="container">
-    <input type="submit" class="btn btn-primary" name="salvar" value="Salvar">
-    <a href="{{url_for('home_admin')}}" class="btn btn-secondary">Cancelar</a>
-    <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">
-</div>
-
-
-</div>
-
-</form>
-</div>
-{% endblock %}
+    </form>
+    {% endblock %}
