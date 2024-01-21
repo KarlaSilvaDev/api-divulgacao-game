@@ -1,9 +1,15 @@
 <!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
 {% extends 'base-admin.html' %}
-{% block content %}
 
-<div class="listar-admin">
-    <table class="table table-hover table-striped">
+{% block content %}
+<link rel="stylesheet" href="/static/css/listar-personagem-adm.css">
+<div class="btn-add">
+  <div class="btn btn-active "><a href="{{ url_for('editar_personagem', id = 0)}}">Adicionar Personagem</a></div>  
+</div>
+
+
+<div>
+    <table id="character">
         <thead>
             <tr>
                 <th>ID</th>
@@ -20,7 +26,8 @@
             </tr>
         </thead>
         <tbody>
-            {% for id, nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
+            {% for id, nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens
+            %}
             <tr>
                 <td>{{ id }}</td>
                 <td><strong>{{ nome }}</strong></td>
@@ -33,13 +40,13 @@
                 <td>{{ historia }}</td>
                 <td>
                     {% if imagem %}
-                        <img src="{{ imagem }}" alt="thumbnail" class="img-thumbnail">
+                    <img src="{{ imagem }}" alt="thumbnail" class="img-table">
                     {% else %}
-                        <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-thumbnail" />
+                    <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-table" />
                     {% endif %}
                 </td>
-                <td> <a href="{{ url_for('editar_personagem', id = id)}}" class="btn btn-light">Editar</a></td>
-               
+                <td> <a href="{{ url_for('editar_personagem', id = id)}}" class="btn btn-active">Editar</a></td>
+
             </tr>
             {% endfor %}
         </tbody>
