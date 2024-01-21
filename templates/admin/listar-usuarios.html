@@ -1,10 +1,16 @@
 <!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
 {% extends 'base-admin.html' %}
 {% block content %}
+<link rel="stylesheet" href="/static/css/usuarios.css">
+
+<h1>Edição de Usuário</h1>
+<div class="btn-add">
+    <td> <a href="{{ url_for('editar_usuario', id = 0)}}" class="btn-add btn-active">Adicionar Usuário</a></td>
+</div>
 
 <div>
 
-    <table class="table">
+    <table class="table" id="user">
         <thead>
             <tr>
                 <th>ID</th>
@@ -21,7 +27,7 @@
                 <td><strong>{{ nome }}</strong></td>
                 <td><strong>{{ login }}</strong></td>
                 <td>{{ email }}</td>
-                <td><a class="btn btn-light"href="{{ url_for('editar_usuario', id = id)}}">Editar</a></td>
+                <td><a class="btn-form btn-active"href="{{ url_for('editar_usuario', id = id)}}">Editar</a></td>
               
             </tr>
             {% endfor %}

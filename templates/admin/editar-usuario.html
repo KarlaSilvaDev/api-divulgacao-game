@@ -1,47 +1,42 @@
 <!--ADMIN: página que irá permitir o cadastro e edição do personagem-->
 {% extends 'base-admin.html' %}
 {% block content %}
-<div class="editar-admin">
-    <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
-        <div class="row ">
-            <div class="col form-group container">
+<link rel="stylesheet" href="/static/css/usuarios.css">
+<div class="align-h1-center">
+    <h1>Editar Usuário</h1>
+</div>
+<div class="form-main">
+    <div class="form-items">
+        <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
+            <div>
                 <label for="id">ID:</label>
-                <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
+                <input type="number" id="id" name="id" value="{{ id }}" required>
             </div>
-            <div class="col form-group container">
+            <div>
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
+                <input type="text" id="nome" name="nome" value="{{ nome }}" required>
             </div>
-            <div class="col form-group container">
-
+            <div>
                 <label for="login">Login:</label>
                 <input type="text" class="form-control" id="login" name="login" value="{{ login }}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col form-group container">
+
+            <div>
                 <label for="email">Email</label>
                 <input type="text" class="form-control" id="email" name="email" value="{{email}}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
             </div>
-            <div class="col form-group container">
+            <div>
                 <label for="senha">Senha</label>
                 <input type="password" class="form-control" id="senha" name="senha" value="{{senha}}" required>
-                <div class="invalid-feedback">Campo obrigatório.</div>
             </div>
 
-        </div>
-        <div class="row">
-            <div class="container">
-                <input type="submit" class="btn btn-primary" name="salvar" value="Salvar">
-                <a href="{{url_for('home_usuario_admin')}}" class="btn btn-secondary">Cancelar</a>
-                <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">
+            <div class="btn-form">
+                <input type="submit" class="btn-active" name="salvar" value="Salvar">
+                <a href="{{url_for('home_usuario_admin')}}" class="btn-active btn-can">Cancelar</a>
+                <input type="submit" class="btn-active" name="excluir" value="Excluir">
 
             </div>
-        </div>
+    </div>
 
 
     </form>
