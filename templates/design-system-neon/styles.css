@@ -1,0 +1,489 @@
+* {
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
+    margin-top: 4%;
+}
+
+/* Video */
+
+#videoHistoria , #videoJogo{
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Preenche a altura mantendo a proporção e cortando o excesso */
+    overflow: hidden; /* Esconde qualquer parte que exceda a altura definida */
+    z-index: 1; 
+    margin-top:-30px;
+}
+
+
+/* Header */
+header {
+    background-color: #01012B;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    padding-bottom: 10px;
+}
+.menu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #01012B;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2; 
+}
+.neon-shadows {
+    color: #FF2A6D;
+   
+    font-weight: 400;
+    font-size: 3vmax;
+    max-width: 100%;
+    display: block;
+    margin-left: 2%;
+}
+.neon-shadows a{
+    color: #FF2A6D;
+    text-shadow: 1px 3px #05D9E8;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+}
+.menu-items ul {
+    display: flex;
+    margin-right: 50px;
+  
+}
+.menu-items a{
+
+    justify-content: space-around;
+    margin-right: 20px;
+    color:#D1F7FF;
+font-size:20px;
+    
+
+}
+
+
+
+
+
+a {
+    color: #05D9E8;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 100%;
+    
+}
+
+/* Typografia */
+/* Títulos */
+h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #FF2A6D;
+    text-shadow: 2px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Sub-títulos */
+h2 {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 100%;
+}
+
+/* Textos */
+p {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+
+/* Cores */
+.txt-bg-dark {
+    color: #D1F7FF;
+}
+
+.txt-bg-light {
+    color: #01012B;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    border: #D1F7FF solid 1px;
+    justify-content: space-around;
+    font-weight: 800;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.pink {
+    background-color: #FF2A6D;
+}
+
+.light-blue {
+    background-color: #D1F7FF;
+}
+
+.neon-blue {
+    background-color: #05D9E8;
+}
+
+.medium-blue {
+    background-color: #005678;
+}
+
+.dark-blue {
+    background-color: #01012B;
+}
+
+/* Espaçamentos */
+.container {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.container-item {
+    padding: 10px 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    max-width: 50%;
+}
+
+.ability {
+    display: block;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.img-ability {
+    max-width: 10%;
+    height: auto;
+    border-radius: 100%;
+    border: #05D9E8 solid 3px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.txt-ability {
+    max-width: 100%;
+    display: block;
+    border: #05D9E8 solid 3px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+.div-ability {
+    display: flex;
+    margin: 2%;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+/* Gray */
+.btn-active {
+    background-color: #05D9E8;
+    color: #01012B;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 15px;
+    width: 70px;
+}
+
+.btn-disabled {
+    background-color: #05D9E8;
+    color: #01012B;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 15px;
+    opacity: 60%;
+    width: 70px;
+}
+
+.card-btn-active {
+    background-color: #FF2A6D;
+    color: #D1F7FF;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.card-btn-disabled {
+    background-color: #FF2A6D;
+    opacity: 60%;
+    color: #D1F7FF;
+    border-radius: 20px;
+    border: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Black */
+/* Imagens */
+/* Video */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: -10px;
+    /* Ajuste a altura conforme necessário */
+    overflow: hidden;
+
+}
+
+
+#video-jogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+/* Estilo das imagens dentro do banner */
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que a imagem cubra completamente o contêiner */
+    opacity: 0;
+    /* Inicia com opacidade 0 para ocultar a imagem */
+    transition: opacity 1s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+/* Estilo para o texto sobre as imagens */
+.banner-text, .video-text {
+    position: absolute;
+    top: 50%;
+    /* Ajuste conforme necessário para posicionar verticalmente no meio */
+    left: 50%;
+    /* Ajuste conforme necessário para posicionar horizontalmente no meio */
+    transform: translate(-50%, -50%);
+    /* Cor do texto */
+    text-align: center;
+    /* Alinhamento do texto */
+    /* white-space: nowrap; Evita quebras de linha */
+    overflow: hidden;
+    /* Oculta o conteúdo que ultrapassa o contêiner */
+    border-right: 2px solid;
+    /* Adiciona um cursor simulado */
+    padding-right: 5px;
+    /* Espaçamento para o cursor simulado */
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #05D9E8;
+    max-width: 100%;
+    background-color: #01012B;
+    opacity: 90%;
+    font-size: 30px;
+    padding:0;
+    
+}
+
+.txt-img {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    padding: 2%;
+    justify-content: space-around;
+}
+
+.txt {
+    display: flex;
+    max-width: 50%;
+    padding:10px;
+}
+
+.img {
+    display: flex;
+    max-width: 50%;
+}
+
+.img-character {
+    max-width: 80%;
+    height: auto;
+    border-radius: 100%;
+    border: #05D9E8 solid 3px;
+    padding: 0;
+}
+.img-place {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    border: #05D9E8 solid 3px;
+    padding: 0;
+}
+
+.card-main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    max-width: 30%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    background-color: #005678;
+    color: #D1F7FF;
+    border-radius: 10px;
+    border: #05D9E8 solid 3px;
+}
+
+.img-card {
+    max-width: 90%;
+    border: solid 3px #FF2A6D;
+    border-radius: 10px;
+}
+
+.card-title {
+    background-color: #005678;
+    color: #FF2A6D;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px;
+    font-optical-sizing: auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+.card-subtitle {
+    background-color: #005678;
+    color: #FF2A6D;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 100%;
+    text-align: center;
+}
+
+.card-text {
+    background-color: #005678;
+    color: #D1F7FF;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.card img {
+    border-radius: solid 2px;
+}
+
+/* Tabela */
+.img-table {
+    max-width: 100%;
+    border-radius: 2px;
+}
+
+table {
+    background-color: #005678;
+    text-align: center;
+    max-width: 100%;
+    margin: 20px;
+}
+
+#character {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#character td,
+#character th {
+    border: 1px solid #D1F7FF;
+    padding: 8px;
+    color: #D1F7FF;
+    vertical-align: middle;
+}
+
+#character tr:nth-child(even) {
+    background-color: #005678;
+}
+
+#character th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #01012B;
+    color: #D1F7FF;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content-txt {
+    max-width: 50%;
+}
+
+.content-img {
+    max-width: 50%;
+}
+
+.content-img img {
+    max-width: 100%;
+    border: solid 3px #FF2A6D;
+    border-radius: 10px;
+}
+
+.bg-img {
+    background-image: url("/static/img/historia/header.jpg");
+    background-repeat: repeat;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #01012B;
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
