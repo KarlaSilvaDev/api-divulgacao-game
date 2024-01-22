@@ -135,7 +135,7 @@ option {
     max-height: 100%;
     font-family: "Public Sans", sans-serif;
     font-size: 16px;
-    min-width: 60px;
+    max-width:80px;
 }
 
 .align-h1-center {
