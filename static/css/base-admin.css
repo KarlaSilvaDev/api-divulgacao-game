@@ -10,6 +10,7 @@
 }
 
 /* Header */
+/* Estilos comuns ao Header */
 header {
     background-color: #01012B;
     display: block;
@@ -58,6 +59,26 @@ header {
     margin-right: 20px;
     color: #D1F7FF;
     font-size: 20px;
+}
+
+/* Adicionando Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-items ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-items a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
 
 /* Buttons */
@@ -114,7 +135,7 @@ option {
     max-height: 100%;
     font-family: "Public Sans", sans-serif;
     font-size: 16px;
-    margin-left: 25%;
+    min-width: 60px;
 }
 
 .align-h1-center {
@@ -122,15 +143,14 @@ option {
 }
 
 .form-main {
-    width: 50%;
-    margin-left: 25%;
-    justify-content: space-around;
     display: block;
-    text-align: left;
+    text-align: center;
     border-radius: 10px;
     border: #05D9E8 solid 3px;
     padding: 20px;
     margin-bottom: 2%;
+    width: 50%;
+    margin-left: 25%;
 }
 
 /* Typography */
@@ -205,6 +225,7 @@ table {
 input[type="text"],
 input[type="number"],
 input[type="password"],
+input[type="email"],
 select {
     border-radius: 20px;
     background-color: #D1F7FF;
@@ -213,6 +234,7 @@ select {
     margin-bottom: 10px;
     margin-top: 10px;
     color: #01012B;
+    font-size: 24px;
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
