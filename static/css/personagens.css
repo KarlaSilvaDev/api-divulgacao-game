@@ -1,38 +1,95 @@
-.personagens {
-    background-color: rgb(41, 41, 41);
-    background-image: url('../img/personagens/background-personagens.jpg');
 
-    background-size: cover;
+body {
+    background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
+    margin-top: 4%;
+}
+.card-main {
+    display: flex;
+    padding:2%;
+    justify-content: space-between;
+
 }
 
 .card {
-    box-shadow: 10px 10px 30px rgba(119, 8, 153, 0.7);
-    border: none;
-
+    width: 300px;
+    text-align: center;
+    
+    color: #D1F7FF;
+    border-radius: 20px;
+    border: #05D9E8 solid 3px;
+    margin-right: 2%;
+    
+    
 }
 
-.card-header {
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgb(38, 5, 70);
+.img-card {
+    height: 200px;
+  /* border: solid 3px #FF2A6D;*/ 
+    border-radius: 10px;
 }
 
 .card-title {
-    font-weight: 700;
-    text-shadow: 2px 2px 2px rgb(188, 109, 233);
+    color: #FF2A6D;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px;
+    font-optical-sizing: auto;
+    text-align: center;
+    max-width: 100%;
 }
 
-.card-img-top {
-    height: 225px;
-    width: 100%;
-    display: block;
+.card-subtitle {
+    color: #FF2A6D;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 100%;
+    text-align: center;
+}
+
+.card-text {
+    color: #D1F7FF;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card img {
+    border-radius: solid 2px;
+    margin-top: 10px;
 
 }
 
-.card-body {
-    background-color: lightgray
+.card-btn-active {
+    background-color: #FF2A6D;
+    color: #D1F7FF;
+    font-family: "Public Sans", sans-serif;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    margin: 15px;
+    max-width:200px;
+    font-weight: bold;
 }
 
-.card-footer {
-    background-color: lightgray;
-    border: none;
+.card-btn-disabled {
+    background-color: #FF2A6D;
+    opacity: 60%;
+    color: #D1F7FF;
+    border-radius: 20px;
+    border: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.modal-content{
+    background-color:#005678 ;
+    color:#D1F7FF;
+}
+
+.modal-body, .modal-title, .modal-header{
+    color:#D1F7FF;
 }

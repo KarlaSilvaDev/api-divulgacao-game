@@ -1,66 +1,171 @@
-*{
-    padding: 0;
-    margin: 0;
+/* Header */
+body {
+    background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
+    margin-top: 4%;
+}
+header {
+    background-color: #01012B;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    padding-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #01012B;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2; 
+}
+
+/* ... restante do código do header ... */
+
+/* Títulos */
+h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #FF2A6D;
+    text-shadow: 2px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Sub-títulos */
+h2 {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 100%;
+}
+
+
+/* ... restante do código de títulos ... */
+.ability {
+    display: block;
     box-sizing: border-box;
     justify-content: space-around;
-
-}
-body{
-    background-color: #452559;
-    color:aliceblue
 }
 
-section{
-    padding: 1%;
-    margin-top: 1%;
-    display: flex;
-    max-height: 25%;
-   
-}
-.ico-home{
-
-}
-
-
-.texto-home{
-    width: 50%;
-    margin: 5px;
-    border: 1px solid #E052F2;
-    padding: 10px;
-    border-radius: 10px;
-   
-   
-}
-.carousel-home{
-   width: 50%;
-   
-
-}
-
-.img-home1 img{
-    max-width:500px;
+.img-ability {
+    max-width: 10%;
+    height: auto;
     border-radius: 100%;
-
-
+    border: #05D9E8 solid 3px;
+    display: flex;
+    box-sizing: border-box;
 }
 
-.icon-home img{
-    max-width:100px;
-    border-radius: 100%; 
-    flex:block;
-    padding: 5px;
-    align-items: center;
+.txt-ability {
+    max-width: 100%;
+    display: block;
+    border-radius: 20px;
+    border: #05D9E8 solid 3px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    margin: 2%;
+    padding:20px;
+}
+
+.div-ability {
+    display: flex;
+    margin: 2%;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+/* Gray */
+.btn-active {
+    background-color: #05D9E8;
+    color: #01012B;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 15px;
+    width: 70px;
+}
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: -10px;
+    /* Ajuste a altura conforme necessário */
+    overflow: hidden;
+
+}
+/* Estilo das imagens dentro do banner */
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adiciona uma transição suave */
+}
+
+/* Estilo para o texto sobre as imagens */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    /* Ajuste conforme necessário para posicionar verticalmente no meio */
+    left: 50%;
+    /* Ajuste conforme necessário para posicionar horizontalmente no meio */
+    transform: translate(-50%, -50%);
+    /* Cor do texto */
+    text-align: center;
+    /* Alinhamento do texto */
+    /* white-space: nowrap; Evita quebras de linha */
+    overflow: hidden;
+    /* Oculta o conteúdo que ultrapassa o contêiner */
+    border-right: 2px solid;
+    /* Adiciona um cursor simulado */
+    padding-right: 5px;
+    /* Espaçamento para o cursor simulado */
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #05D9E8;
+    max-width: 100%;
+    background-color: rgba(1, 1, 43, 0.5);
+    opacity: 90%;
+    font-size: 30px;
+    padding:0;
     
 }
 
-button{
-    margin:5px;
-    color: #452559;
-    background-color: #452559
-   
-   
-   
+.txt-img {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    padding: 2%;
+    justify-content: space-around;
 }
-h4{
-    text-align: center;
+
+.txt {
+    display: flex;
+    max-width: 50%;
+    padding:10px;
 }
+
+.img {
+    display: flex;
+    max-width: 50%;
+}
+
+.img-character {
+    max-width: 80%;
+    height: auto;
+    border-radius: 100%;
+    border: #05D9E8 solid 3px;
+    padding: 0;
+}
+

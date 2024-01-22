@@ -1,24 +1,24 @@
-{% extends 'base-public.html'%} 
+{% extends 'base-public.html'%}
 {% block public_content %}
-<link rel="stylesheet" href="../../static/css/jogo.css">
 
 <!-- fonts do google -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-
-<div class="container">
-    <h1> Jogo</h1>
-    <div class="video_square">
-        <div> <video autoplay loop src="../../static/videos/video-home.mp4"></video>
-        </video></div>
-        <div class="texto-sobre-video">
-            <h2>Aqui você vai descobrir como jogar</h2>
-            <p>Em um futuro distópico, mergulhe em um jogo futurista onde a realidade virtual 
-                se entrelaça com o mundo físico.</p>
-        </div> 
+<div class="banner-container"> 
+    <div class="img-bg-jogo"></div>
+  
+    <div class="text-container">   
+        <h1>Conheça o Jogo</h1>     
+        <p id="scrolling-text"></p>
     </div>
+</div>
+
+
+
+    <script src="../../static/js/jogo.js"></script>
+    <link rel="stylesheet" href="/static/css/jogo.css">
 </div>
 
 {% endblock %}

@@ -1,53 +1,42 @@
-<!--PUBLIC: Página que irá listar os personagens- APENAS LEITURA -->
-{% extends 'base-public.html'%} 
+{% extends 'base-public.html' %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{url_for('static', filename = 'css/personagens.css')}}"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<!-- Adicione seus estilos aqui, se necessário -->
 {% endblock %}
 
 {% block public_content %}
-<div class="personagens">
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Lista de Personagens</h1>
-            <p class="lead text-muted">Algo curto e direto, sobre a coleção abaixo (conteúdo, criador e etc). Faça com que seja curto e legal, mas não tão curto ao ponto de as pessoas pularem ele.</p>
-            <p>
-                <a href="#" class="btn btn-primary my-2">Call-to-action principal</a>
-                <a href="#" class="btn btn-secondary my-2">Call-to-action secundário</a>
-            </p>
-        </div>
-    </section>
+<link rel="stylesheet" href="/static/css/personagens.css">
 
-    <div class="album py-5">
-        <div class="container">
 
-            <div class="row">
-                {% for id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
-                <div class="col-md-4">
-                    <div class="card mb-5 ">
-                        <div class="card-header text-light">
-                            <h4 class="card-title">{{ nome }}</h4>
-                            <p class="card-subtitle">{{ classe }}</p>
-                        </div>
-                        <img class="card-img-top" alt="Thumbnail [100%x225]" src="{{ imagem }}">
-
-                        {% set historia = "história" if  "história"|length <= 100 else personagem['história'][:100] ~ '...' %}
-
-                        <div class="card-body">
-                            <p class="card-text">{{historia}}</p>
-                        </div>
-                        <div class="card-footer d-flex justify-content-end">
-                            <a href="#" class="btn btn-sm btn-outline-secondary ">VER DETALHES</a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+<h1>Conheça os Personagens</h1>
+<div class="card-main">
+    {% for id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
+        {% set historia_resumida = "historia" if historia|length < 100 else historia[:100] ~ '...' %}
+        <div id="card-{{ loop.index }}" class="card{% if not classe %} no-subtitle{% endif %}">
+            <div class="card-header">
+                <h1 class="card-title">{{ nome }}</h1>
+                {% if classe %}
+                    <h2 class="card-subtitle">{{ classe }}</h2>
+                {% endif %}
             </div>
+            <img class="img-card" alt="imagem character" src="{{ imagem }}">
+            <div class="resumo-texto" id="resumo-{{ loop.index }}">
+                <!-- Texto resumido aqui -->
+                <p>{{ historia_resumida }}</p>
+            </div>
+            <div class="completo-texto" id="completo-{{ loop.index }}" style="display: none;">
+                <!-- Texto completo aqui -->
+                <p>{{ historia }}</p>
+            </div>
+            <button class="card-btn-active button-ver-mais" onclick="toggleTexto({{ loop.index }})">Ver Mais</button>
+        
         </div>
-    </div>
+
+    {% endfor %}
 </div>
+
+
+
+<script src="../../static/js/personagens.js"></script>
 
 {% endblock %}

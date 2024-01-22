@@ -1,0 +1,62 @@
+/* Conteúdo do historia.css */
+/* Adicione regras específicas para historia.html aqui */
+body {
+    background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
+    margin-top: 4%;
+}
+.videoHistoria {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: -30px;
+}
+
+.txt-img {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    padding: 2%;
+    justify-content: space-around;
+}
+
+.txt {
+    display: flex;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.img {
+    display: flex;
+    max-width: 50%;
+}
+
+.img-place {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    border: #05D9E8 solid 3px;
+    padding: 0;
+}
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: -10px;
+    /* Ajuste a altura conforme necessário */
+    overflow: hidden;
+
+}
+
+#videoHistoria{
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Preenche a altura mantendo a proporção e cortando o excesso */
+    overflow: hidden; /* Esconde qualquer parte que exceda a altura definida */
+    z-index: 1; 
+    margin-top:-30px;
+}
+
+
+/* Adicione outras regras específicas para historia.html aqui */

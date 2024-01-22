@@ -1,0 +1,249 @@
+/* Reset CSS */
+* {
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    background-color: #01012B;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    padding-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #01012B;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2; 
+}
+
+.neon-shadows {
+    color: #FF2A6D;
+    font-weight: 400;
+    font-size: 3vmax;
+    max-width: 100%;
+    display: block;
+    margin-left: 2%;
+}
+
+.neon-shadows a {
+    color: #FF2A6D;
+    text-shadow: 1px 3px #05D9E8;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+}
+
+.menu-items ul {
+    display: flex;
+    margin-right: 50px;
+}
+
+.menu-items a {
+    justify-content: space-around;
+    margin-right: 20px;
+    color: #D1F7FF;
+    font-size: 20px;
+}
+
+/* Buttons */
+.btn-can {
+    text-align: center;
+    display: block;
+}
+
+.btn-add {
+    text-align: center;
+}
+
+.btn-add a {
+    background-color: #05D9E8;
+    font-family: "Public Sans", sans-serif;
+    color: #01012B;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-active,
+.btn-disabled {
+    background-color: #05D9E8;
+    font-family: "Public Sans", sans-serif;
+    color: #01012B;
+    border-radius: 20px;
+    border: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 15px;
+    max-width: 200px;
+    font-size: 16px;
+}
+
+.btn-disabled {
+    opacity: 60%;
+}
+
+/* Form Elements */
+label,
+.invalid-feedback,
+option {
+    color: #D1F7FF;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding: 20px;
+}
+
+.btn-form {
+   text-align: center;
+    display: flex;
+    max-height: 100%;
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    margin-left: 25%;
+}
+
+.align-h1-center {
+    text-align: center;
+}
+
+.form-main {
+    width: 50%;
+    margin-left: 25%;
+    justify-content: space-around;
+    display: block;
+    text-align: left;
+    border-radius: 10px;
+    border: #05D9E8 solid 3px;
+    padding: 20px;
+    margin-bottom: 2%;
+}
+
+/* Typography */
+/* Titles */
+h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #FF2A6D;
+    text-shadow: 2px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Subtitles */
+h2 {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 100%;
+}
+
+/* Text */
+p {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+
+/* Colors */
+.txt-bg-dark {
+    color: #D1F7FF;
+}
+
+.txt-bg-light {
+    color: #01012B;
+}
+
+/* Images and Tables */
+.img-table {
+    max-width: 100%;
+    border-radius: 2px;
+}
+
+table {
+    background-color: #005678;
+    text-align: center;
+    max-width: 90%;
+    margin: 20px;
+    padding-top: 0px;
+    margin-left: 5%;
+}
+
+.form-items {
+    display: block;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.form-items img {
+    display: block;
+    border-radius: 100%;
+    max-width: 60%;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select {
+    border-radius: 20px;
+    background-color: #D1F7FF;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #01012B;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    width: 100%;
+}
+
+.textarea {
+    border-radius: 20px;
+    background-color: #D1F7FF;
+    text-align: justify;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: #01012B;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #01012B;
+    display: absolute;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
