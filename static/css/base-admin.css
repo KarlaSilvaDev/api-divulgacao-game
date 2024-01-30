@@ -9,6 +9,7 @@
     max-width: 100%;
 }
 
+
 /* Header */
 /* Estilos comuns ao Header */
 header {
@@ -110,7 +111,6 @@ header {
     font-weight: bold;
     margin: 15px;
     font-size: 16px;
-    text-align: center;
 }
 
 
@@ -135,6 +135,11 @@ option {
     justify-content: flex-end;
     font-family: "Public Sans", sans-serif;
     font-size: 16px;
+    gap:0px;
+    text-align: center;
+    
+}
+.btn-edit {
     text-align: center;
 }
 
@@ -207,7 +212,8 @@ table {
 }
 
 .table td{
-   padding:10px; 
+   padding:15px; 
+   text-align: center;
 }
 
 .form-items {
