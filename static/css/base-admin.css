@@ -109,9 +109,10 @@ header {
     padding: 10px;
     font-weight: bold;
     margin: 15px;
-    max-width: 200px;
     font-size: 16px;
+    text-align: center;
 }
+
 
 .btn-disabled {
     opacity: 60%;
@@ -130,12 +131,11 @@ option {
 }
 
 .btn-form {
-   text-align: center;
     display: flex;
-    max-height: 100%;
+    justify-content: flex-end;
     font-family: "Public Sans", sans-serif;
     font-size: 16px;
-    max-width:80px;
+    text-align: center;
 }
 
 .align-h1-center {
@@ -148,9 +148,8 @@ option {
     border-radius: 10px;
     border: #05D9E8 solid 3px;
     padding: 20px;
-    margin-bottom: 2%;
     width: 50%;
-    margin-left: 25%;
+    margin:0 auto 2% auto;
 }
 
 /* Typography */
@@ -207,6 +206,10 @@ table {
     margin-left: 5%;
 }
 
+.table td{
+   padding:10px; 
+}
+
 .form-items {
     display: block;
     padding: 20px;
@@ -242,6 +245,11 @@ select {
     width: 100%;
 }
 
+#ocupacao option, #habilidade option {
+    
+    color: #01012B;
+}
+
 .textarea {
     border-radius: 20px;
     background-color: #D1F7FF;
@@ -262,9 +270,13 @@ select {
 }
 
 /* Footer */
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 footer {
     background-color: #01012B;
-    display: absolute;
     width: 100%;
     text-align: center;
     height: 50px;

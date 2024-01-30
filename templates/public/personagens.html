@@ -17,6 +17,8 @@
                 <h1 class="card-title">{{ nome }}</h1>
                 {% if classe %}
                     <h2 class="card-subtitle">{{ classe }}</h2>
+                    {% else %}
+                    <h2 class="card-subtitle"></h2>
                 {% endif %}
             </div>
             <img class="img-card" alt="imagem character" src="{{ imagem }}">

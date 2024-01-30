@@ -3,7 +3,7 @@
 {% block content %}
 <link rel="stylesheet" href="/static/css/usuarios.css">
 <div class="align-h1-center">
-    <h1>Editar Usuário</h1>
+    <h1>Editar Personagem</h1>
 </div>
 <div class="form-main">
     <div class="form-items">
@@ -50,7 +50,8 @@
                 </div>
                 <div>
                     <label for="exampleFormControlSelect1">Ocupação:</label>
-                    <select id="ocupacao" name="ocupacao" value="{{ ocupacao }}">
+                    <select id="ocupacao" name="ocupacao" value="{{ ocupacao }}"required >
+                        <option></option>
                         <option>Ciborgue</option>
                         <option>Humano</option>
                         <option>Robô</option>
@@ -58,8 +59,9 @@
                 </div>
                 <div>
                     <label for="exampleFormControlSelect1">Habilidade única:</label>
-                    <select id="habilidade" name="habilidade" value="{{ habilidade }}">
+                    <select id="habilidade" name="habilidade" value="{{ habilidade }}" required>
 
+                        <option></option>
                         <option>Acrobacia urbana</option>
                         <option>Atirador de elite</option>
                         <option>Engenheiro de Drone</option>
@@ -73,7 +75,7 @@
                 </div>
 
                 <div class="btn-form ">
-                    <input type="submit" class=" btn-active" name="salvar" value="Salvar">
+                    <input type="submit" class=" btn-active " name="salvar" value="Salvar">
                     <a href="{{url_for('home_admin')}}" class="btn-can btn-active">Cancelar</a>
                     <input type="submit" class="btn-active" name="excluir" value="Excluir">
                 </div>

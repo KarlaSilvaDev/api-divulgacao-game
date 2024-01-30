@@ -5,19 +5,23 @@ body {
 }
 .card-main {
     display: flex;
+    flex-wrap: wrap;
     padding:2%;
-    justify-content: space-between;
+    justify-content: center;
+    
+    
 
 }
 
 .card {
     width: 300px;
-    text-align: center;
-    
+    text-align: center;    
     color: #D1F7FF;
     border-radius: 20px;
     border: #05D9E8 solid 3px;
     margin-right: 2%;
+    margin-bottom: 2%;
+    position: relative;
     
     
 }
@@ -47,6 +51,7 @@ body {
     font-style: normal;
     max-width: 100%;
     text-align: center;
+    min-height:30px;
 }
 
 .card-text {
