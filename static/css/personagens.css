@@ -90,11 +90,35 @@ body {
     font-weight: bold;
 }
 
-.modal-content{
-    background-color:#005678 ;
-    color:#D1F7FF;
-}
-
-.modal-body, .modal-title, .modal-header{
-    color:#D1F7FF;
-}
+/* Estilo para esconder a modal inicialmente */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 30%;
+    max-width:50%;
+    height: auto;
+    overflow: auto;
+    background-color:#D1F7FF;
+    font-family: "Public Sans", sans-serif;
+    border-radius: 10px;
+  }
+  
+  .modal-content {
+    color: #005678;
+    padding: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    
+  }
+  
+  .close {
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:#D1F7FF ;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
