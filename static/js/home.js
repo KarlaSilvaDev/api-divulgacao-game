@@ -1,3 +1,52 @@
+const imagens = [
+    "/static/img/home/carrossel2.jpg",
+    "/static/img/home/carrossel3.jpg",
+    "/static/img/home/carrossel4.jpg"
+];
+
+const imagemElement = document.querySelector('.banner-image');
+let indiceAtual = 0;
+
+function alterarImagem() {
+    // Remova a linha abaixo
+    // imagemElement.style.opacity = 0;
+
+    // Remova o setTimeout, pois queremos que a transição ocorra automaticamente com o tempo definido no CSS
+    imagemElement.src = imagens[indiceAtual];
+    indiceAtual = (indiceAtual + 1) % imagens.length;
+
+    // Adicione um pequeno atraso antes de ajustar a opacidade para garantir que a transição ocorra após a imagem ser carregada
+    setTimeout(() => {
+        imagemElement.style.opacity = 1;
+    }, 50);
+}
+
+alterarImagem();
+setInterval(alterarImagem, 5000);
+const textoCompleto = "\nDesvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e distopia se entrelaçam. Você está pronto para esta jornada?";
+const textoElement = document.getElementById('typing-text-home');
+let indice = 0;
+
+// Função para exibir texto com efeito de digitação
+function exibirTexto() {
+    textoElement.textContent += textoCompleto[indice];
+    indice++;
+    if (indice < textoCompleto.length) {
+        setTimeout(exibirTexto, 50); // Ajuste o tempo conforme necessário
+    }
+}
+
+// Chama a função de exibição de texto inicialmente
+exibirTexto();
+
+// Autoplay do vídeo História
+var video = document.getElementById("videoHome");
+
+// Reproduzir o vídeo quando a página é carregada
+window.onload = function () {
+    video.play();
+};
+
 document.getElementById("verMais").style.display = "none";
 document.getElementById("verMenos").style.display = "none";
 
@@ -178,52 +227,5 @@ function verMenos() {
     document.getElementById("verMenos").style.display = "none";
 }
 
-const imagens = [
-    "/static/img/home/carrossel2.jpg",
-    "/static/img/home/carrossel3.jpg",
-    "/static/img/home/carrossel4.jpg"
-];
 
-const imagemElement = document.querySelector('.banner-image');
-let indiceAtual = 0;
-
-function alterarImagem() {
-    // Remova a linha abaixo
-    // imagemElement.style.opacity = 0;
-
-    // Remova o setTimeout, pois queremos que a transição ocorra automaticamente com o tempo definido no CSS
-    imagemElement.src = imagens[indiceAtual];
-    indiceAtual = (indiceAtual + 1) % imagens.length;
-
-    // Adicione um pequeno atraso antes de ajustar a opacidade para garantir que a transição ocorra após a imagem ser carregada
-    setTimeout(() => {
-        imagemElement.style.opacity = 1;
-    }, 50);
-}
-
-alterarImagem();
-setInterval(alterarImagem, 5000);
-const textoCompleto = "\nDesvende segredos e escolhas cruciais em Neon Shadows, onde a realidade virtual e distopia se entrelaçam. Você está pronto para esta jornada?";
-const textoElement = document.getElementById('typing-text-home');
-let indice = 0;
-
-// Função para exibir texto com efeito de digitação
-function exibirTexto() {
-    textoElement.textContent += textoCompleto[indice];
-    indice++;
-    if (indice < textoCompleto.length) {
-        setTimeout(exibirTexto, 50); // Ajuste o tempo conforme necessário
-    }
-}
-
-// Chama a função de exibição de texto inicialmente
-exibirTexto();
-
-// Autoplay do vídeo História
-var video = document.getElementById("videoHome");
-
-// Reproduzir o vídeo quando a página é carregada
-window.onload = function () {
-    video.play();
-};
 
