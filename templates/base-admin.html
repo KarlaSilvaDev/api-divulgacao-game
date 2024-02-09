@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div class="content">
+  <nav>
 
     <div class="menu">
       <div class="neon-shadows"><a href="{{ url_for('home')}}">Neon Shadows</a></div>
@@ -41,17 +41,18 @@
       </div>
 
     </div>
-    </header>
+  </nav>
+  </header>
 
-    <!--Conteúdo Principal-->
-    <main class="container conteudo-principal">{% block content %}{% endblock %}</main>
+  <!--Conteúdo Principal-->
+  <main class="container conteudo-principal">{% block content %}{% endblock %}</main>
   </div>
   <!--Rodapé-->
-   <div class="footer">
-   <footer>  
+  <div class="footer">
+    <footer>
       <p class="txt-bg-dark">© 2024 Team 3 - Korú</p>
-  </footer>
-   </div> 
+    </footer>
+  </div>
 
 
 </body>
