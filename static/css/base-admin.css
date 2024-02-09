@@ -31,7 +31,7 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .neon-shadows {
@@ -135,10 +135,11 @@ option {
     justify-content: flex-end;
     font-family: "Public Sans", sans-serif;
     font-size: 16px;
-    gap:0px;
+    gap: 0px;
     text-align: center;
-    
+
 }
+
 .btn-edit {
     text-align: center;
 }
@@ -154,7 +155,7 @@ option {
     border: #05D9E8 solid 3px;
     padding: 20px;
     width: 50%;
-    margin:0 auto 2% auto;
+    margin: 0 auto 2% auto;
 }
 
 /* Typography */
@@ -211,9 +212,9 @@ table {
     margin-left: 5%;
 }
 
-.table td{
-   padding:15px; 
-   text-align: center;
+.table td {
+    padding: 15px;
+    text-align: center;
 }
 
 .form-items {
@@ -251,8 +252,9 @@ select {
     width: 100%;
 }
 
-#ocupacao option, #habilidade option {
-    
+#ocupacao option,
+#habilidade option {
+
     color: #01012B;
 }
 
@@ -276,11 +278,12 @@ select {
 }
 
 /* Footer */
-.footer{
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
 footer {
     background-color: #01012B;
     width: 100%;

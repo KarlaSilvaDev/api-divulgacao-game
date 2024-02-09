@@ -2,7 +2,9 @@
 body {
     background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
     margin-top: 4%;
+    background-repeat: no-repeat;
 }
+
 header {
     background-color: #01012B;
     display: block;
@@ -22,7 +24,7 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: 2; 
+    z-index: 2;
 }
 
 /* ... restante do código do header ... */
@@ -72,7 +74,7 @@ h2 {
     box-sizing: border-box;
     justify-content: space-around;
     margin: 2%;
-    padding:20px;
+    padding: 20px;
 }
 
 .div-ability {
@@ -93,6 +95,7 @@ h2 {
     margin: 15px;
     width: 70px;
 }
+
 .banner-container {
     position: relative;
     width: 100%;
@@ -102,6 +105,7 @@ h2 {
     overflow: hidden;
 
 }
+
 /* Estilo das imagens dentro do banner */
 
 .banner-image {
@@ -109,7 +113,8 @@ h2 {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Adiciona uma transição suave */
+    transition: opacity 1s ease-in-out;
+    /* Adiciona uma transição suave */
 }
 
 /* Estilo para o texto sobre as imagens */
@@ -138,8 +143,8 @@ h2 {
     background-color: rgba(1, 1, 43, 0.5);
     opacity: 90%;
     font-size: 30px;
-    padding:0;
-    
+    padding: 0;
+
 }
 
 .txt-img {
@@ -153,7 +158,7 @@ h2 {
 .txt {
     display: flex;
     max-width: 50%;
-    padding:10px;
+    padding: 10px;
 }
 
 .img {
@@ -168,4 +173,3 @@ h2 {
     border: #05D9E8 solid 3px;
     padding: 0;
 }
-

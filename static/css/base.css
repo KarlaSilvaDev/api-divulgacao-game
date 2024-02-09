@@ -10,6 +10,7 @@
 
 body {
     background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
+    background-repeat: no-repeat;
     margin-top: 4%;
 }
 
