@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block public_content %}
+
+<link rel="stylesheet" href="/static/css/index.css">
     <section>
         <div class="banner-container">
             <img class="banner-image" src="/static/img/home/carrossel1.jpg" alt="Imagem 1">
@@ -31,33 +33,33 @@
 
     <div class="ability">
         <div class="div-ability">
-            <img class="img-ability" id="ability-acrobata" src="/static/img/home/acrobata_urbano.jpg"
-                title="Acrobata Urbano" onclick="changeAbilityAcrobata()">
+            <img class="img-ability" id="ability-acrobat" src="/static/img/home/acrobata.jpg"
+                title="Acrobata Urbano" onclick="changeAbilityAcrobat()">
             <img class="img-ability" id="ability-sniper" src="/static/img/home/atirador_elite.jpg"
                 onclick="changeAbilitySniper()" title="Atirador elite">
             <img class="img-ability" id="ability-engineer" src="/static/img/home/engenheiro_drone.jpg"
                 onclick="changeAbilityEngineer()" title="Engenheira de Drone" class="">
             <img class="img-ability" id="ability-hacker" src="/static/img/home/hacker.jpg"
                 onclick="changeAbilityHacker()" title="Hacker">
-            <img class="img-ability" id="ability-master" src="/static/img/home/mestra_combate.jpg"
-                onclick="changeAbilityMaster()" title="Mestre em combate" class="">
+            <img class="img-ability" id="ability-master" src="/static/img/home/mestra.jpg"
+                onclick="changeAbilityMaster()" title="Mestra em combate" class="">
         </div>
     </div>
 
     <div class="txt-ability">
         <h1 id="title-ability">Habilidade exclusiva</h1>
-        <h2 class="txt-bg-dark" id="summary-ability ">Em um universo repleto de desafios, cada personagem no jogo traz consigo uma ability única, fundamental para estratégia e jogabilidade. Essas abilitys não apenas enriquecem a narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em diferentes situações. A escolha do personagem não é apenas estética, mas estratégica, permitindo aos jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As abilitys únicas não só diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça do jogo, e suas abilitys únicas desempenham um papel crucial na exploração, estratégia e sucesso global.
+        <h2 class="txt-bg-dark" id="summary-ability">Em um universo repleto de desafios, cada personagem no jogo traz consigo uma ability única, fundamental para estratégia e jogabilidade. Essas abilitys não apenas enriquecem a narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em diferentes situações. A escolha do personagem não é apenas estética, mas estratégica, permitindo aos jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As abilitys únicas não só diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça do jogo, e suas abilitys únicas desempenham um papel crucial na exploração, estratégia e sucesso global.
         </h2>
         <p id="verMais1"></p>
         <p id="verMais2"></p>
         <p id="verMais3"></p>
         <p id="verMais4"></p>
-        <div>
-            <button id="verMais" type="button" class="btn" onclick="verMais()">Ver mais</button>
+        <!-- <div>
+            <button id="verMais" type="button" class="btn-active" onclick="verMais()">Ver mais</button>
         </div>
         <div>
-            <button id="verMenos" type="button" class="btn" display=none onclick="verMenos()">Ver menos</button>
-        </div>
+            <button id="verMenos" type="button" class="btn-active" display=none onclick="verMenos()">Ver menos</button>
+        </div> -->
     </div>
 
     <div id="foto-personagem-ability" class="d-flex justify-content-center img-home1">
@@ -70,7 +72,6 @@
     <!-- Adicione seus scripts JS no final para garantir que o DOM esteja carregado -->
  
     <script src="/static/js/home.js"></script>
-    <link rel="stylesheet" href="/static/css/index.css">
 
     
 {% endblock %}

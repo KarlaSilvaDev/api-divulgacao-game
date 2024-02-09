@@ -16,23 +16,23 @@
 </head>
 
 <body>
-  <div class="content">
+  <nav>
 
     <div class="menu">
       <div class="neon-shadows"><a href="{{ url_for('home')}}">Neon Shadows</a></div>
       <div class="menu-items">
         <ul>
           <li>
-            <h1><a href="{{ url_for('home') }}">HOME</a></h1>
+            <h2><a href="{{ url_for('home') }}">INÍCIO</a></h2>
           </li>
           <li>
-            <h1><a href="{{ url_for('home_admin')}}">PERSONAGENS</a></h1>
+            <h2><a href="{{ url_for('home_admin')}}">GERENCIAR PERSONAGENS</a></h2>
           </li>
           <li>
-            <h1><a href="{{ url_for('home_habilidade_admin')}}">HABILIDADES</a></h1>
+            <h2><a href="{{ url_for('home_habilidade_admin')}}">GERENCIAR HABILIDADES</a></h2>
           </li>
           <li>
-            <h1><a href="{{ url_for('home_usuario_admin')}}">USUÁRIOS</a></h1>
+            <h2><a href="{{ url_for('home_usuario_admin')}}">GERENCIAR USUÁRIOS</a></h2>
           </li>
         </ul>
 
@@ -41,17 +41,19 @@
       </div>
 
     </div>
-    </header>
+  </nav>
+  </header>
 
-    <!--Conteúdo Principal-->
-    <main class="container conteudo-principal">{% block content %}{% endblock %}</main>
+  <!--Conteúdo Principal-->
+  <main class="container conteudo-principal">{% block content %}{% endblock %}</main>
   </div>
   <!--Rodapé-->
-  <footer>
-    <div class="footer">
+  <div class="footer">
+    <footer>
       <p class="txt-bg-dark">© 2024 Team 3 - Korú</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
+
 
 </body>
 

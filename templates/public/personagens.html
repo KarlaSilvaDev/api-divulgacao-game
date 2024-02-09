@@ -17,6 +17,8 @@
                 <h1 class="card-title">{{ nome }}</h1>
                 {% if classe %}
                     <h2 class="card-subtitle">{{ classe }}</h2>
+                    {% else %}
+                    <h2 class="card-subtitle"></h2>
                 {% endif %}
             </div>
             <img class="img-card" alt="imagem character" src="{{ imagem }}">
@@ -29,10 +31,20 @@
                 <p class="paragrafo">{{ historia }}</p>
               
             </div>
+<<<<<<< HEAD
             <button class="card-btn-active button-ver-mais" onclick="toggleTexto({{ loop.index }})">Ver Mais</button>
           
+=======
+            <button id="btn-ver-mais" class="card-btn-active button-ver-mais" onclick="toggleTexto({{ loop.index }})">Ver Mais</button>
+>>>>>>> nathy
         
         </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">              
+              <div id="texto-completo" class="texto-completo"></div>
+              <button class="card-btn-active close">Fechar</button>
+            </div>
+          </div>
 
     {% endfor %}
 </div>
