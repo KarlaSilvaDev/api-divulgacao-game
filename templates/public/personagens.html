@@ -11,37 +11,38 @@
 <h1>Conheça os Personagens</h1>
 <div class="card-main">
     {% for id, nome, classe, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
-        {% set historia_resumida = "historia" if historia|length < 100 else historia[:100] ~ '...' %}
-        <div id="card-{{ loop.index }}" class="card{% if not classe %} no-subtitle{% endif %}">
-            <div class="card-header">
-                <h1 class="card-title">{{ nome }}</h1>
-                {% if classe %}
-                    <h2 class="card-subtitle">{{ classe }}</h2>
-                    {% else %}
-                    <h2 class="card-subtitle"></h2>
-                {% endif %}
-            </div>
-            <img class="img-card" alt="imagem character" src="{{ imagem }}">
-            <div class="resumo-texto" id="resumo-{{ loop.index }}">
-                <!-- Texto resumido aqui -->
-                <p>{{ historia_resumida }}</p>
-            </div>
-            <div class="completo-texto" id="completo-{{ loop.index }}" style="display: none;">
-                <!-- Texto completo aqui -->
-                <p class="paragrafo">{{ historia }}</p>
-              
-            </div>
-            <button id="btn-ver-mais" class="card-btn-active button-ver-mais" onclick="toggleTexto({{ loop.index }})">Ver Mais</button>
-        
+    {% set historia_resumida = "historia" if historia|length < 100 else historia[:100] ~ '...' %} <div
+        id="card-{{ loop.index }}" class="card{% if not classe %} no-subtitle{% endif %}">
+        <div class="card-header">
+            <h1 class="card-title">{{ nome }}</h1>
+            {% if classe %}
+            <h2 class="card-subtitle">{{ classe }}</h2>
+            {% else %}
+            <h2 class="card-subtitle"></h2>
+            {% endif %}
         </div>
-        <div id="modal" class="modal">
-            <div class="modal-content">              
-              <div id="texto-completo" class="texto-completo"></div>
-              <button class="card-btn-active close">Fechar</button>
-            </div>
-          </div>
+        <img class="img-card" alt="imagem character" src="{{ imagem }}">
+        <div class="resumo-texto" id="resumo-{{ loop.index }}">
+            <!-- Texto resumido aqui -->
+            <p>{{ historia_resumida }}</p>
+        </div>
+        <div class="completo-texto" id="completo-{{ loop.index }}" style="display: none;">
+            <!-- Texto completo aqui -->
+            <p class="paragrafo">{{ historia }}</p>
 
-    {% endfor %}
+        </div>
+        <button id="btn-ver-mais" class="card-btn-active button-ver-mais" onclick="toggleTexto({{ loop.index }})">Ver
+            Mais</button>
+
+</div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div id="texto-completo" class="texto-completo"></div>
+        <button class="card-btn-active close">Fechar</button>
+    </div>
+</div>
+
+{% endfor %}
 </div>
 
 
