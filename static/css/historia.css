@@ -1,9 +1,12 @@
-/* Conteúdo do historia.css */
-/* Adicione regras específicas para historia.html aqui */
 body {
     background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
     margin-top: 4%;
 }
+
+.banner__history {
+    position: relative;
+}
+
 .videoHistoria {
     width: 100%;
     height: 300px;
@@ -13,18 +16,51 @@ body {
     margin-top: -30px;
 }
 
-.txt-img {
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    padding: 2%;
-    justify-content: space-around;
+.banner__history h1 {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 2;
+    text-shadow: 1px 1px 1px black;
+    background-color: var(--header-color);
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--primary-color);
+
 }
 
-.txt {
+.history {
     display: flex;
-    max-width: 50%;
-    padding: 10px;
+    max-width: 100%;
+    padding: 5%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.history__text {
+    width: 50%;
+}
+
+.history__image {
+    width: 45%;
+}
+
+.history__image img {
+    max-width: 100%;
+    border-radius: 20px;
+    border: var(--primary-color) solid 3px;
+    padding: 0;
+    box-shadow: 1px 1px 10px black;
+}
+
+.history__image img:hover {
+    filter: contrast(120%);
 }
 
 .img {
@@ -39,6 +75,28 @@ body {
     border: #05D9E8 solid 3px;
     padding: 0;
 }
+
+.parallax {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background-image: url("../img/historia/parallax.jpg");
+    height: 20vh;
+    box-shadow: 0 0 20px black inset;
+}
+
+.parallax h2 {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    color: white;
+    padding: 1%;
+    background-color: var(--secondary-color);
+    width: fit-content;
+    border-radius: 10px 10px 0 0;
+}
+
 .banner-container {
     position: relative;
     width: 100%;
@@ -49,13 +107,15 @@ body {
 
 }
 
-#videoHistoria{
+#videoHistoria {
     width: 100%;
     height: 300px;
-    object-fit: cover; /* Preenche a altura mantendo a proporção e cortando o excesso */
-    overflow: hidden; /* Esconde qualquer parte que exceda a altura definida */
-    z-index: 1; 
-    margin-top:-30px;
+    object-fit: cover;
+    /* Preenche a altura mantendo a proporção e cortando o excesso */
+    overflow: hidden;
+    /* Esconde qualquer parte que exceda a altura definida */
+    z-index: 1;
+    margin-top: -30px;
 }
 
 

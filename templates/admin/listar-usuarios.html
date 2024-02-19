@@ -1,38 +1,37 @@
-<!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
 {% extends 'base-admin.html' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/css/usuarios.css">
+{% endblock %}
+
 {% block content %}
-<link rel="stylesheet" href="/static/css/usuarios.css">
+    <h1 class="title">Lista de Usuário</h1>
+    <a href="{{ url_for('editar_usuario', id = 0)}}" class="btn btn-add">Adicionar Usuário</a>
 
-<h1>Edição de Usuário</h1>
-<div class="btn-add">
-    <td> <a href="{{ url_for('editar_usuario', id = 0)}}" class="btn-add btn-active">Adicionar Usuário</a></td>
-</div>
+    <div>
 
-<div>
-
-    <table class="table" id="user">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Login</th>
-                <th>Email</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for id, nome, login, email, senha in usuarios %}
-            <tr>
-                <td>{{ id }}</td>
-                <td><strong>{{ nome }}</strong></td>
-                <td><strong>{{ login }}</strong></td>
-                <td>{{ email }}</td>
-                <td><a class="btn-edit btn-active"href="{{ url_for('editar_usuario', id = id)}}">Editar</a></td>
-              
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-
+        <table class="data__table" id="user">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Login</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for id, nome, login, email, senha in usuarios %}
+                <tr>
+                    <td>{{ id }}</td>
+                    <td><strong>{{ nome }}</strong></td>
+                    <td><strong>{{ login }}</strong></td>
+                    <td>{{ email }}</td>
+                    <td><a class="btn btn-edit"href="{{ url_for('editar_usuario', id = id)}}">Editar</a></td>
+                
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

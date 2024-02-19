@@ -1,16 +1,14 @@
-<!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
 {% extends 'base-admin.html' %}
 
-{% block content %}
-<link rel="stylesheet" href="/static/css/listar-personagem-adm.css">
-<h1>Edição de Personagens</h1>
-<div class="btn-add">
-   
-    <td> <a href="{{ url_for('editar_personagem', id = 0)}}" class="btn-add btn-active">Adicionar Personagem</a></td>
-</div>
+{% block styles %}
+    <link rel="stylesheet" href="/static/css/listar-personagem-adm.css">
+{% endblock %}
 
-<div>
-    <table id="character">
+{% block content %}
+
+    <h1 class="title">Lista de Personagens</h1>
+    <a href="{{ url_for('editar_personagem', id = 0)}}" class="btn btn-add">Adicionar Personagem</a>
+    <table class="data__table" id="character">
         <thead>
             <tr>
                 <th>ID</th>
@@ -27,31 +25,31 @@
             </tr>
         </thead>
         <tbody>
-            {% for id, nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens
-            %}
-            <tr>
-                <td>{{ id }}</td>
-                <td><strong>{{ nome }}</strong></td>
-                <td>{{ ocupacao }}</td>
-                <td>{{ forca }}</td>
-                <td>{{ destreza }}</td>
-                <td>{{ inteligencia }}</td>
-                <td>{{ idade }}</td>
-                <td>{{ habilidade }}</td>
-                <td>{{ historia }}</td>
-                <td>
-                    {% if imagem %}
-                    <img src="{{ imagem }}" alt="thumbnail" class="img-table">
-                    {% else %}
-                    <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-table" />
-                    {% endif %}
-                </td>
-                <td> <a href="{{ url_for('editar_personagem', id = id)}}" class=" btn-active btn-edit">Editar</a></td>
-
-            </tr>
+            {% for id, nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem in personagens %}
+            {% set historia_resumida = "historia" if historia|length < 30 else historia[:30] ~ '...' %} 
+                <tr>
+                    <td>{{ id }}</td>
+                    <td><strong>{{ nome }}</strong></td>
+                    <td>{{ ocupacao }}</td>
+                    <td>{{ forca }}</td>
+                    <td>{{ destreza }}</td>
+                    <td >{{ inteligencia }}</td>
+                    <td>{{ idade }}</td>
+                    <td>{{ habilidade }}</td>
+                    <td>{{ historia_resumida }}</td>
+                    <td>
+                        {% if imagem %}
+                        <img src="{{ imagem }}" class="character__image" alt="thumbnail">
+                        {% else %}
+                        <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="character__image" alt="thumbnail"/>
+                        {% endif %}
+                    </td>
+                    <td> 
+                        <a href="{{ url_for('editar_personagem', id = id)}}" class="btn btn-edit">Editar</a>
+                    </td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
-</div>
 
 {% endblock %}

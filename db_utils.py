@@ -3,6 +3,7 @@ import sqlite3
 
 # PERSONAGENS:
 
+
 def gerar_id_personagens():
     conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
@@ -11,12 +12,27 @@ def gerar_id_personagens():
     return next_id + 1
 
 
-def adicionar_personagem(nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem):
+def adicionar_personagem(
+    nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem
+):
     try:
         conn = sqlite3.connect("database.db")
         cursor = conn.cursor()
         sql_insert = "INSERT INTO personagens (nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem) values (?,?,?,?,?,?,?,?,?)"
-        cursor.execute(sql_insert, (nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem))
+        cursor.execute(
+            sql_insert,
+            (
+                nome,
+                ocupacao,
+                forca,
+                destreza,
+                inteligencia,
+                idade,
+                habilidade,
+                historia,
+                imagem,
+            ),
+        )
         id = cursor.lastrowid
         conn.commit()
         conn.close()
@@ -36,20 +52,67 @@ def retornar_personagem(id: int):
 
         sql_select = "SELECT * FROM personagens WHERE id = ?"
         cursor.execute(sql_select, (id,))
-        (id, nome, ocupacao, forca, destreza, inteligencia, idade, habilidade,historia, imagem) = cursor.fetchone()
+        (
+            id,
+            nome,
+            ocupacao,
+            forca,
+            destreza,
+            inteligencia,
+            idade,
+            habilidade,
+            historia,
+            imagem,
+        ) = cursor.fetchone()
         conn.close()
 
-        return (id, nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem)
+        return (
+            id,
+            nome,
+            ocupacao,
+            forca,
+            destreza,
+            inteligencia,
+            idade,
+            habilidade,
+            historia,
+            imagem,
+        )
     except:
         return False
 
 
-def editar_personagem(id: int, nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem):  
+def editar_personagem(
+    id: int,
+    nome,
+    ocupacao,
+    forca,
+    destreza,
+    inteligencia,
+    idade,
+    habilidade,
+    historia,
+    imagem,
+):
     try:
         conn = sqlite3.connect("database.db")
         cursor = conn.cursor()
         sql_update = "UPDATE personagens SET nome = ?, ocupacao = ?, forca = ?, destreza = ?, inteligencia = ?, idade = ?, habilidade = ?, historia = ?, imagem = ? WHERE id = ?"
-        cursor.execute(sql_update, (nome, ocupacao, forca, destreza, inteligencia, idade, habilidade, historia, imagem, id))
+        cursor.execute(
+            sql_update,
+            (
+                nome,
+                ocupacao,
+                forca,
+                destreza,
+                inteligencia,
+                idade,
+                habilidade,
+                historia,
+                imagem,
+                id,
+            ),
+        )
         conn.commit()
         conn.close()
         return True
@@ -86,6 +149,7 @@ def retornar_personagens():
 
 
 # USUÁRIOS
+
 
 def gerar_id_usuarios():
     conn = sqlite3.connect("database.db")
@@ -127,11 +191,13 @@ def retornar_usuario(id: int):
         return False
 
 
-def editar_usuario(id: int, nome, login, email, senha):  
+def editar_usuario(id: int, nome, login, email, senha):
     try:
         conn = sqlite3.connect("database.db")
         cursor = conn.cursor()
-        sql_update = "UPDATE usuarios SET nome = ?, login = ?, email = ?, senha = ? WHERE id = ?"
+        sql_update = (
+            "UPDATE usuarios SET nome = ?, login = ?, email = ?, senha = ? WHERE id = ?"
+        )
         cursor.execute(sql_update, (nome, login, email, senha, id))
         conn.commit()
         conn.close()
@@ -167,7 +233,9 @@ def retornar_usuarios():
     except:
         return False
 
+
 # HABILIDADES
+
 
 def gerar_id_habilidades():
     conn = sqlite3.connect("database.db")
@@ -181,7 +249,7 @@ def adicionar_habilidade(nome, descricao):
     try:
         conn = sqlite3.connect("database.db")
         cursor = conn.cursor()
-        sql_insert = "INSERT INTO usuarios (nome, descricao) values (?,?)"
+        sql_insert = "INSERT INTO habilidades (nome, descricao) values (?,?)"
         cursor.execute(sql_insert, (nome, descricao))
         id = cursor.lastrowid
         conn.commit()
@@ -209,7 +277,7 @@ def retornar_habilidade(id: int):
         return False
 
 
-def editar_habilidade(id: int, nome, descricao):  
+def editar_habilidade(id: int, nome, descricao):
     try:
         conn = sqlite3.connect("database.db")
         cursor = conn.cursor()
@@ -248,4 +316,3 @@ def retornar_habilidades():
         return habilidades
     except:
         return False
-

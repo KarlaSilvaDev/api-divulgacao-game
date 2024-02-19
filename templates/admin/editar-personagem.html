@@ -1,89 +1,98 @@
-<!-- //ADMIN: página que irá permitir o cadastro e edição do personagem -->
 {% extends 'base-admin.html' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/css/listar-personagem-adm.css">
+{% endblock %}
+
 {% block content %}
-<link rel="stylesheet" href="/static/css/usuarios.css">
-<div class="align-h1-center">
+
     <h1>Editar Personagem</h1>
-</div>
-<div class="form-main">
-    <div class="form-items">
-        <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
-            <div>
-                <label for="imagem">Imagem:</label>
 
-                <input type="text" id="imagem" name="imagem" value="{{ imagem }}">
-                {% if imagem %}
+    <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
+        <div class="form-main">
+            <div class="form-items">
+                <div>
+                    {% if imagem %}
+                        <img src="{{imagem}}" class="img-table">
+                    {% else %}
+                        <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-table">
+                    {% endif %}
+                </div>
+                <div>
+                    <fieldset class="main-data-container">
+                        <legend>Identificação</legend>
+                        <div class="main-data-row">
+                            <div class="datum">
+                                <label for="id">ID:</label>
+                                <input type="number" id="id" name="id" value="{{ id }}" required>
+                            </div>
+                            <div class="datum">
+                                <label for="idade">Idade:</label>
+                                <input type="number" id="idade" name="idade" value="{{ idade }}" required>
+                            </div>
+                            <div class="datum">
+                                <label for="ocupacao">Ocupação:</label>
+                                <select id="ocupacao" name="ocupacao" required >
+                                    <option></option>
+                                    <option value="Ciborgue" {% if ocupacao == 'Ciborgue' %} selected {% endif %}>Ciborgue</option>
+                                    <option value="Humano" {% if ocupacao == 'Humano' %} selected {% endif %}>Humano</option>
+                                    <option value="Robô" {% if ocupacao == 'Robô' %} selected {% endif %}>Robô</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="main-data-column">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" value="{{ nome }}" required>
+                        </div>
+                        <div class="main-data-column">
+                            <label for="imagem">Imagem:</label>
+                            <input type="text" id="imagem" name="imagem" value="{{ imagem }}">
+                        </div>
+                        
+                    </fieldset>
+                    <fieldset class="skills-container">
+                        <legend>Habilidades</legend>
+                        <div class="basic-skills">
+                            <div class="skill">
+                                <label for="forca">Força:</label>
+                                <input type="number" class="range" min="0" max="10" id="forca" name="forca" value="{{ forca }}" required>
+                            </div>
+                            <div class="skill">
+                                <label for="destreza">Destreza:</label>
+                                <input type="number" min="0" max="10" class="form-control" id="destreza" name="destreza" value="{{ destreza }}" required>
+                            </div>
+                            <div class="skill">
+                                <label for="inteligencia">Inteligência:</label>
+                                <input type="number" class="form-range" min="0" max="10" id="inteligencia" name="inteligencia" value="{{ inteligencia }}" required>
+                            </div>
+                        </div>
+                        <div class="special-skill">
+                            <label for="habilidade">Habilidade única:</label>
+                            <select id="habilidade" name="habilidade" required>
+                                <option></option>
+                                <option value="Acrobacia urbana" {% if habilidade == 'Acrobacia urbana' %} selected {% endif %}>Acrobacia urbana</option>
+                                <option value="Atirador de elite" {% if habilidade == 'Atirador de elite' %} selected {% endif %}>Atirador de elite</option>
+                                <option value="Engenheiro de drone" {% if habilidade == 'Engenheiro de drone' %} selected {% endif %}>Engenheiro de drone</option>
+                                <option value="Hacker" {% if habilidade == 'Hacker' %} selected {% endif %}>Hacker</option>
+                                <option value="Mestre em combate" {% if habilidade == 'Mestre em combate' %} selected {% endif %}>Mestre em combate</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="history-container">
+                        <legend>História</legend>
+                        <textarea class="form__character-history" id="auto-resize-textarea" name="historia" oninput="autoResize()">{{ historia }}</textarea>
+                    </fieldset>
 
-                <img src="{{imagem}}" class="img-table">
-                {% else %}
-                <img src="https://images2.imgbox.com/68/3d/kEhAXnXQ_o.png" class="img-table">
-
-                {% endif %}
+                    <div class="btn-form ">
+                        <input type="submit" class="btn btn-save" name="salvar" value="Salvar">
+                        <a href="{{url_for('home_admin')}}" class="btn btn-cancel">Cancelar</a>
+                        <input type="submit" class="btn btn-del" name="excluir" value="Excluir">
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="id">ID:</label>
-                <input type="number" id="id" name="id" value="{{ id }}" required>
-            </div>
-            <div>
-                <div class="id-age"> <label for="idade">Idade:</label>
-                    <input type="number" id="idade" name="idade" value="{{ idade }}" required>
-                </div>
+        </div>
+    </form>
+    <script src="/static/js/admin.js"></script>
 
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" value="{{ nome }}" required>
-                </div>
-                <div>
-                    <label for="forca">Força:</label>
-                    <input type="number" class="range" min="0" max="10" id="forca" name="forca" value="{{ forca }}"
-                        required>
-                </div>
-                <div>
-                    <label for="destreza">Destreza:</label>
-                    <input type="number" min="0" max="10" class="form-control" id="destreza" name="destreza"
-                        value="{{ destreza }}" required>
-                </div>
-                <div>
-                    <label for="inteligencia">Inteligência:</label>
-                    <input type="number" class="form-range" min="0" max="10" id="inteligencia" name="inteligencia"
-                        value="{{ inteligencia }}" required>
-                </div>
-                <div>
-                    <label for="exampleFormControlSelect1">Ocupação:</label>
-                    <select id="ocupacao" name="ocupacao" value="{{ ocupacao }}"required >
-                        <option></option>
-                        <option>Ciborgue</option>
-                        <option>Humano</option>
-                        <option>Robô</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="exampleFormControlSelect1">Habilidade única:</label>
-                    <select id="habilidade" name="habilidade" value="{{ habilidade }}" required>
-
-                        <option></option>
-                        <option>Acrobacia urbana</option>
-                        <option>Atirador de elite</option>
-                        <option>Engenheiro de Drone</option>
-                        <option>Hacker</option>
-                        <option>Mestre em combate</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="história">História:</label>
-                    <textarea class="textarea" id="historia" name="historia">{{ historia }}</textarea>
-                </div>
-
-                <div class="btn-form ">
-                    <input type="submit" class=" btn-active " name="salvar" value="Salvar">
-                    <a href="{{url_for('home_admin')}}" class="btn-can btn-active">Cancelar</a>
-                    <input type="submit" class="btn-active" name="excluir" value="Excluir">
-                </div>
-            </div>
-
-
-        </form>
-    </div>
-    {% endblock %}
-
-   
+    </section>
+{% endblock %} 

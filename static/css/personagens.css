@@ -1,37 +1,42 @@
-
 body {
     background-image: linear-gradient(to bottom right, #01012B, #05D9E8);
     margin-top: 4%;
     background-repeat: no-repeat;
 }
+
+h1 {
+    margin: 80px 5% 5% 5%;
+}
+
 .card-main {
     display: flex;
     flex-wrap: wrap;
-    padding:2%;
     justify-content: center;
-    
-    
-
+    gap: 3%;
+    margin: 5%;
 }
 
 .card {
-    height: 550px;
+    height: 600px;
     width: 300px;
-    text-align: center;    
-    color: #D1F7FF;
+    padding: 20px;
+    text-align: center;
+    color: var(--txt-bg-dark-color);
     border-radius: 20px;
-    border: #05D9E8 solid 3px;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    position: relative;
-    
-    
+    box-shadow: 3px 3px 10px var(--primary-color);
+    margin-bottom: 3%;
+    background-color: var(--header-color);
 }
 
-.img-card {
-    height: 200px;
-  /* border: solid 3px #FF2A6D;*/ 
-    border-radius: 10px;
+.card:hover {
+    border: 2px solid var(--primary-color)
+}
+
+.container__card-title {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-title {
@@ -43,6 +48,7 @@ body {
     font-optical-sizing: auto;
     text-align: center;
     max-width: 100%;
+    padding: 3px;
 }
 
 .card-subtitle {
@@ -53,72 +59,65 @@ body {
     font-style: normal;
     max-width: 100%;
     text-align: center;
-    min-height:30px;
+    min-height: 30px;
+    border-top: 1px solid var(--secondary-color);
 }
 
-.card-text {
-    color: #D1F7FF;
-    font-family: "Public Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+.img-card {
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.card img {
-    border-radius: solid 2px;
-    margin-top: 10px;
-
+.resumo-texto p {
+    width: 200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.card-btn-active {
-    background-color: #FF2A6D;
-    color: #D1F7FF;
+.btn-ver-mais,
+.btn-close {
+    background-color: var(--secondary-color);
+    color: var(--txt-bg-light-color);
     border-radius: 20px;
     border: 10px;
     padding: 10px;
     font-weight: bold;
-    margin: 15px;
+    margin: 30px auto 0px auto;
 }
 
-.card-btn-disabled {
-    background-color: #FF2A6D;
-    opacity: 60%;
-    color: #D1F7FF;
-    border-radius: 20px;
-    border: 20px;
-    padding: 10px;
-    font-weight: bold;
+.btn-ver-mais:hover,
+.btn-close:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
 }
 
-/* Estilo para esconder a modal inicialmente */
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
     top: 30%;
-    max-width:50%;
+    max-width: 50%;
     height: auto;
     overflow: auto;
-    background-color:#D1F7FF;
-    font-family: "Public Sans", sans-serif;
+    background-color: #D1F7FF;
     border-radius: 10px;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
+    font-family: "Public Sans", sans-serif;
     color: #005678;
     padding: 30px;
     padding-bottom: 10px;
-    text-align: center;
-    
-  }
-  
-  .close {
-  }
-  
-  .close:hover,
-  .close:focus {
-    color:#D1F7FF ;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+}
+
+.texto-completo {
+    text-align: justify;
+}
+
+.btn-close {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}

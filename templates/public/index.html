@@ -1,77 +1,73 @@
 {% extends 'base-public.html' %}
 
 {% block styles %}
-    <!-- Adicione seus estilos personalizados aqui, se necessário -->
-{% endblock %}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %} 
 
 {% block public_content %}
-
-<link rel="stylesheet" href="/static/css/index.css">
     <section>
-        <div class="banner-container">
-            <img class="banner-image" src="/static/img/home/carrossel1.jpg" alt="Imagem 1">
-            <div class="banner-text" id="typing-text-home"></div>
+        <div class="banner">
+            <img class="banner__image" src="/static/img/home/carrossel1.jpg" alt="Imagem 1">
+            <div class="banner__text" id="typing-text-home"></div>
         </div>
     </section>
 
     <section>
-        <div class="txt-img">
-            <h2 class="txt-bg-dark txt">
-                Em 2178, na distópica Nexus Prime, Enigma, um renegado ex-agente, guarda o último fragmento de um código
-                proibido que pode reescrever a realidade virtual. Envolvido por corporações e facções rebeldes, ele
-                busca a Ascensão, uma utopia virtual. Em Neon Shadows, a megalópole é um labirinto de ameaças e alianças,
-                onde Enigma enfrenta escolhas cruciais. Neste caos digital, a linha entre herói e vilão desaparece,
-                revelando segredos sombrios e traições. Prepare-se para uma jornada eletrizante em busca da verdade,
-                enquanto Enigma decide o destino de Nexus Prime e desvenda mistérios ocultos. A revolução está à espreita,
-                e a chave está em desvendar o enigma.
-            </h2>
-            <div>
-                <img src="/static/img/personagens/hacker.jpg" class="img-character img">
+        <div class="intro">
+            <div class="intro__text">
+                <h1 >Neon Shadows</h1>
+                <p class="txt-bg-dark">
+                    Em 2178, na distópica Nexus Prime, Enigma, um renegado ex-agente, guarda o último fragmento de um código proibido que pode reescrever a realidade virtual. Envolvido por corporações e facções rebeldes, ele busca a Ascensão, uma utopia virtual. Em Neon Shadows, a megalópole é um labirinto de ameaças e alianças, onde Enigma enfrenta escolhas cruciais. Neste caos digital, a linha entre herói e vilão desaparece, revelando segredos sombrios e traições. Prepare-se para uma jornada eletrizante em busca da verdade, enquanto Enigma  decide o destino de Nexus Prime e desvenda mistérios ocultos. A revolução está à espreita, e a chave está em desvendar o enigma.
+                </p>
+            </div>
+            <div class="intro__image">
+                <img src="/static/img/personagens/hacker.jpg">
             </div>
         </div>
     </section>
 
-    <div class="ability">
-        <div class="div-ability">
-            <img class="img-ability" id="ability-acrobat" src="/static/img/home/acrobata.jpg"
-                title="Acrobata Urbano" onclick="changeAbilityAcrobat()">
-            <img class="img-ability" id="ability-sniper" src="/static/img/home/atirador_elite.jpg"
-                onclick="changeAbilitySniper()" title="Atirador elite">
-            <img class="img-ability" id="ability-engineer" src="/static/img/home/engenheiro_drone.jpg"
-                onclick="changeAbilityEngineer()" title="Engenheira de Drone" class="">
-            <img class="img-ability" id="ability-hacker" src="/static/img/home/hacker.jpg"
-                onclick="changeAbilityHacker()" title="Hacker">
-            <img class="img-ability" id="ability-master" src="/static/img/home/mestra.jpg"
-                onclick="changeAbilityMaster()" title="Mestra em combate" class="">
+    <section class="skills">
+        <h2>Habilidades Exclusivas</h2>
+
+        <div class="skills__text">
+            <p class="txt-bg-dark">Em um universo repleto de desafios, cada personagem no jogo traz consigo uma habilidade única,fundamental para estratégia e jogabilidade. Essas habilidades não apenas enriquecem a narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em diferentes situações.    
+            </p>
+            <p class="txt-bg-dark">A escolha do personagem não é apenas estética, mas estratégica, permitindo aos jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As habilidades únicas não só diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça do jogo, e suas habilidades únicas desempenham um papel crucial na exploração, estratégia e sucesso global.
+            </p>
         </div>
-    </div>
 
-    <div class="txt-ability">
-        <h1 id="title-ability">Habilidade exclusiva</h1>
-        <h2 class="txt-bg-dark" id="summary-ability">Em um universo repleto de desafios, cada personagem no jogo traz consigo uma ability única, fundamental para estratégia e jogabilidade. Essas abilitys não apenas enriquecem a narrativa, mas também oferecem vantagens táticas cruciais, influenciando diretamente o sucesso em diferentes situações. A escolha do personagem não é apenas estética, mas estratégica, permitindo aos jogadores moldar seu estilo de jogo e abordar desafios de maneiras únicas. As abilitys únicas não só diversificam a experiência do jogador, mas também incentivam a experimentação, proporcionando uma jornada envolvente e imersiva no universo do jogo. Cada personagem é uma peça essencial no quebra-cabeça do jogo, e suas abilitys únicas desempenham um papel crucial na exploração, estratégia e sucesso global.
-        </h2>
-        <p id="verMais1"></p>
-        <p id="verMais2"></p>
-        <p id="verMais3"></p>
-        <p id="verMais4"></p>
-        <!-- <div>
-            <button id="verMais" type="button" class="btn-active" onclick="verMais()">Ver mais</button>
+        <div class="skills__list">
+            <div class="skills__container">
+                <img class="skills__icon" id="acrobat-skill" src="/static/img/home/acrobata.jpg" title="Acrobata Urbano" onclick="changeSkillToAcrobat()">
+                <p class="txt-bg-dark">Acrobata Urbano</p>
+            </div>
+            <div class="skills__container">
+                <img class="skills__icon" id="sniper-skill" src="/static/img/home/atirador_elite.jpg" title="Atirador elite" onclick="changeSkillToSniper()">
+                <p class="txt-bg-dark">Atirador de Elite</p>
+            </div>
+            <div class="skills__container">
+                <img class="skills__icon" id="engineer-skill" src="/static/img/home/engenheiro_drone.jpg" title="Engenheira de Drone" onclick="changeSkillToEngineer()">
+                <p class="txt-bg-dark">Engenheiro de Drones</p>
+            </div>
+            <div class="skills__container">
+                <img class="skills__icon" id="hacker-skill" src="/static/img/home/hacker.jpg" title="Hacker" onclick="changeSkillToHacker()" >
+                <p class="txt-bg-dark">Hacker</p>
+            </div>
+            <div class="skills__container">
+                <img class="skills__icon" id="master-skill" src="/static/img/home/mestra.jpg" title="Mestra em combate" onclick="changeSkillToMaster()">
+                <p class="txt-bg-dark">Mestre em Combate</p>
+            </div>   
         </div>
-        <div>
-            <button id="verMenos" type="button" class="btn-active" display=none onclick="verMenos()">Ver menos</button>
-        </div> -->
-    </div>
+        <div class="skills__text">
+            <h3 id="skills__title">Clique nos ícones acima para conhecer cada habilidade</h3>
+            <p class="txt-bg-dark" id="skills__description"></p>
+            <p class="txt-bg-dark" id="verMais1"></p>
+            <p class="txt-bg-dark" id="verMais2"></p>
+            <p class="txt-bg-dark" id="verMais3"></p>
+            <p id="verMenos" class="btn-active" onclick="verMenos()">Ver menos</p>
+            <p id="verMais" class="btn-active" onclick="verMais()">Ver mais</p>
+        </div>
+    </section>
 
-    <div id="foto-personagem-ability" class="d-flex justify-content-center img-home1">
-        <img id="img-personagem-home" src="">
-    </div>
-
-    <!-- Seção do carrossel de imagens -->
-
-
-    <!-- Adicione seus scripts JS no final para garantir que o DOM esteja carregado -->
- 
     <script src="/static/js/home.js"></script>
-
-    
 {% endblock %}

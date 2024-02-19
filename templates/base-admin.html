@@ -1,60 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Shadows</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Moirai+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% block styles %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <div class="neon-shadows">
+          <a href="{{ url_for('home')}}">Neon Shadows</a>
+        </div>
+        <div class="menu-items">
+          <ul>
+            <li>
+              <a href="{{ url_for('home') }}">INÍCIO</a>
+            </li>
+            <li>
+              <a href="{{ url_for('home_admin')}}">GERENCIAR PERSONAGENS</a>
+            </li>
+            <li>
+              <a href="{{ url_for('home_habilidade_admin')}}">GERENCIAR HABILIDADES</a>
+            </li>
+            <li>
+              <a href="{{ url_for('home_usuario_admin')}}">GERENCIAR USUÁRIOS</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap"
-    rel="stylesheet">
+    <main class="container conteudo-principal">
+      {% block content %}{% endblock %}
+    </main>
 
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Moirai+One&display=swap"
-    rel="stylesheet">
-  <title>Neon Shadows</title>
-
-  <link rel="stylesheet" href="/static/css/base-admin.css">
-</head>
-
-<body>
-  <nav>
-
-    <div class="menu">
-      <div class="neon-shadows"><a href="{{ url_for('home')}}">Neon Shadows</a></div>
-      <div class="menu-items">
-        <ul>
-          <li>
-            <h2><a href="{{ url_for('home') }}">INÍCIO</a></h2>
-          </li>
-          <li>
-            <h2><a href="{{ url_for('home_admin')}}">GERENCIAR PERSONAGENS</a></h2>
-          </li>
-          <li>
-            <h2><a href="{{ url_for('home_habilidade_admin')}}">GERENCIAR HABILIDADES</a></h2>
-          </li>
-          <li>
-            <h2><a href="{{ url_for('home_usuario_admin')}}">GERENCIAR USUÁRIOS</a></h2>
-          </li>
-        </ul>
-
-        </ul>
-
-      </div>
-
-    </div>
-  </nav>
-  </header>
-
-  <!--Conteúdo Principal-->
-  <main class="container conteudo-principal">{% block content %}{% endblock %}</main>
-  </div>
-  <!--Rodapé-->
-  <div class="footer">
     <footer>
-      <p class="txt-bg-dark">© 2024 Team 3 - Korú</p>
+      <div>
+        <p class="txt-bg-dark">© 2024 Team 3 - Korú</p>
+      </div>
     </footer>
-  </div>
-
-
-</body>
-
+  </body>
 </html>

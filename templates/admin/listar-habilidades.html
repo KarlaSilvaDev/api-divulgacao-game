@@ -1,15 +1,15 @@
-<!--ADMIN: página que irá listar os personagens dando as opções do CRUD-->
 {% extends 'base-admin.html' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/css/habilidades.css">
+{% endblock %}
+
 {% block content %}
-<link rel="stylesheet" href="/static/css/habilidades.css">
 
-<h1>Edição de Habilidade</h1>
-<div class="btn-add">
-    <td> <a href="{{ url_for('editar_habilidade', id = 0)}}" class="btn-add btn-active">Adicionar Habilidade</a></td>
-</div>
+    <h1 class="title">Lista de Habilidades</h1>
+    <a href="{{ url_for('editar_habilidade', id = 0)}}" class="btn btn-add">Adicionar Habilidade</a>
 
-<div>
-    <table class="table" id="ability">
+    <table class="data__table" id="ability">
         <thead>
             <tr>
                 <th>ID</th>
@@ -20,15 +20,14 @@
         </thead>
         <tbody>
             {% for id, nome, descricao in habilidades %}
-            <tr>
-                <td>{{ id }}</td>
-                <td><strong>{{ nome }}</strong></td>
-                <td>{{ descricao }}</td>
-                <td><a class="btn-active btn-edit" href="{{ url_for('editar_habilidade', id = id)}}">Editar</a></td>
-            </tr>
+                <tr>
+                    <td>{{ id }}</td>
+                    <td><strong>{{ nome }}</strong></td>
+                    <td>{{ descricao }}</td>
+                    <td><a class="btn btn-edit" href="{{ url_for('editar_habilidade', id = id)}}">Editar</a></td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
-</div>
 
 {% endblock %}
