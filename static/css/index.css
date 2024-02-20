@@ -22,22 +22,21 @@ body {
 
 .banner__text {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     overflow: hidden;
     border-right: 2px solid;
     padding-right: 5px;
+    max-width: 100%;
     font-family: "Zen Dots", sans-serif;
+    font-size: 1.5em;
     font-weight: 400;
     font-style: normal;
     color: var(--primary-color);
-    max-width: 100%;
     background-color: rgba(1, 1, 43, 0.5);
     opacity: 90%;
-    font-size: 30px;
-    padding: 0;
 }
 
 .intro {
@@ -49,10 +48,12 @@ body {
 
 .intro__text {
     width: 65%;
+    text-align: justify;
 }
 
 .intro__image {
     width: 30%;
+    margin: auto;
 }
 
 .intro__image img {
@@ -62,7 +63,6 @@ body {
     padding: 0;
 }
 
-/* ... restante do código de títulos ... */
 .skills {
     display: block;
     box-sizing: border-box;
@@ -95,6 +95,8 @@ body {
     flex-wrap: wrap;
     width: 20%;
     align-items: center;
+    text-align: center;
+    font-size: 1em;
 }
 
 .skills__icon {
@@ -107,22 +109,20 @@ body {
     transition: filter 0.3s;
 }
 
+
 .skills__icon:hover {
     filter: brightness(110%) saturate(150%) hue-rotate(320deg);
     cursor: pointer;
 }
 
 .skills__text {
-    max-width: 100%;
-    display: block;
-    box-sizing: border-box;
-    justify-content: space-around;
     margin: 0 5% 2% 5%;
+    text-align: justify;
 }
 
 .skills__text h3 {
     font-family: var(--h3-font);
-    font-size: 1.3em;
+    font-size: 1.25em;
     text-align: center;
     color: var(--txt-bg-light-color);
     background-color: var(--secondary-color);
@@ -139,21 +139,70 @@ body {
     display: none;
 }
 
-.btn-active {
+.btn-ver-mais,
+.btn-ver-menos {
     color: var(--txt-bg-light-color);
     border: 2px solid var(--header-color);
     border-radius: 10px;
     padding: 3px;
     font-weight: bold;
-    margin: 0;
-    width: 8%;
+    margin: 2% 0;
     text-align: center;
     font-size: 1em;
+    width: 10%;
 }
 
-.btn-active:hover {
+.btn-ver-mais:hover,
+.btn-ver-menos:hover {
     background-color: var(--secondary-color);
     cursor: pointer;
 }
 
-@media (min-width: 1500px) {}
+@media (max-width: 1000px) {
+    .banner__text {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+    }
+
+    .intro__image {
+        width: 40%;
+
+    }
+
+    .intro__text {
+        width: 55%;
+    }
+
+    .skills__container p {
+        padding: 0 20px;
+    }
+
+    .btn-ver-mais,
+    .btn-ver-menos {
+        width: 15%;
+    }
+}
+
+@media (max-width: 900px) {
+    .banner__text {
+        font-size: 1.25em;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro__text {
+        width: 100%;
+    }
+
+    .intro__image {
+        width: 50%;
+        margin: 2% auto;
+    }
+
+    .skills__container p {
+        display: none;
+    }
+}
